@@ -1,0 +1,6 @@
+name: vic-pimentel
+recipe: pantheon
+config:
+  framework: wordpress
+  site: vic-pimentel
+  id: 2f25e6b2-8dd2-4a8b-b800-e562fb9595d0
