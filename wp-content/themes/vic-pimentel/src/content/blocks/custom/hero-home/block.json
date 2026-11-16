@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "hero-home.php"
+    },
+    "name": "acf/hero-home",
+    "title": "Home Hero",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "cover-image",
+    "keywords": [
+        "hero-home"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/hero-home/preview.png"
+        }
+    },
+    "style": "hero-home-style",
+    "editorStyle": "hero-home-style"
+}

@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "services-list.php"
+    },
+    "name": "acf/services-list",
+    "title": "Services List",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "list-view",
+    "keywords": [
+        "services-list"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/services-list/preview.png"
+        }
+    },
+    "style": "services-list-style",
+    "editorStyle": "services-list-style"
+}

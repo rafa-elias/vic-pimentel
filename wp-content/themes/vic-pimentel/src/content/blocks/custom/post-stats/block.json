@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "post-stats.php"
+    },
+    "name": "acf/post-stats",
+    "title": "Project Stats",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "chart-bar",
+    "keywords": [
+        "post-stats"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/post-stats/preview.png"
+        }
+    },
+    "style": "post-stats-style",
+    "editorStyle": "post-stats-style"
+}

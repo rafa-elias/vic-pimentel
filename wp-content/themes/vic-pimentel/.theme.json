@@ -1,0 +1,25 @@
+{
+    "figmaUrl": "https://www.figma.com/design/QAZnKg9XaNh8sOhZbxXgEl/Website--Copy-?node-id=73-1571",
+    "contentPaths": {
+        "admin": [
+            "styles/admin"
+        ],
+        "blocks": [
+            "content/blocks"
+        ],
+        "components": [
+            "content/components"
+        ],
+        "sections": [
+            "content/sections"
+        ],
+        "static": [
+            "styles/static",
+            "scripts/static"
+        ],
+        "templates": [
+            "scripts/templates",
+            "styles/templates"
+        ]
+    }
+}

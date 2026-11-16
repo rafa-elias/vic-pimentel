@@ -1,0 +1,135 @@
+{
+    "key": "group_aa3eab77ed19b",
+    "title": "Block: Project-Listing",
+    "fields": [
+        {
+            "name": "show_featured",
+            "label": "Show the \"Featured\" tab first",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_5a792c41fc2e4"
+        },
+        {
+            "name": "featured_label",
+            "label": "Featured tab label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Featured",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_fe9e976e32817"
+        },
+        {
+            "name": "featured_posts",
+            "label": "Featured projects",
+            "type": "relationship",
+            "instructions": "Up to 16, in display order. \"You May Also Like\" on project pages picks random projects from this list (taken from the listing on the front page).",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5a792c41fc2e4",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "taxonomy"
+            ],
+            "return_format": "id",
+            "elements": [
+                "featured_image"
+            ],
+            "max": 16,
+            "min": "",
+            "key": "field_8e7ccc19d4e74"
+        },
+        {
+            "name": "categories",
+            "label": "Category tabs",
+            "type": "taxonomy",
+            "instructions": "Leave empty to show every category that has projects.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "allow_null": 1,
+            "key": "field_b0e6f64439d4c"
+        },
+        {
+            "name": "results_label",
+            "label": "Results label",
+            "type": "text",
+            "instructions": "%d is replaced with the number of projects.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Showing { %d Results }",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_baba5eabb4462"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/project-listing"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

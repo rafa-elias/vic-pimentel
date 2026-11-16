@@ -1,0 +1,34 @@
+@use 'util' as *;
+
+// Sections cap at 1920 (designer: "Section max width it's really 1920px"); hero, header and
+// footer use .full and keep scaling past it. .media / .content are the post-detail and
+// about reading columns (950 / 850 in Figma), centred inside the 1920 wrapper.
+.wrapper {
+	width: 100%;
+	max-width: $wrapper-default;
+	margin: 0 auto;
+	padding-left: $horizontal-padding;
+	padding-right: $horizontal-padding;
+
+	&.full {
+		max-width: $wrapper-full;
+	}
+
+	&.modal {
+		max-width: $wrapper-modal;
+	}
+}
+
+.column-media {
+	width: 100%;
+	max-width: $wrapper-media;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.column-content {
+	width: 100%;
+	max-width: $wrapper-content;
+	margin-left: auto;
+	margin-right: auto;
+}

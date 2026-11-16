@@ -1,0 +1,31 @@
+@use 'util' as *;
+
+// Light at the top of the project and about pages (Unicorn "about-resources" scene).
+// Fixed to the top of the viewport for the whole page; the scene itself brightens while
+// scrolling and eases back when scrolling stops (its own "while scrolling" event).
+.page-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    // The scene is authored on a full 1920×1080 artboard — give it the whole viewport
+    // (no crop, no extra mask: the light's falloff is part of the scene).
+    height: 100vh;
+    height: 100lvh;
+    pointer-events: none;
+}
+
+.page-light-sticky {
+    position: absolute;
+    inset: 0;
+}
+
+// Page content paints above the fixed light (transparent areas let it show through).
+main > section,
+main > div,
+main > .post-body > section,
+.component-footer {
+    position: relative;
+    z-index: 1;
+}

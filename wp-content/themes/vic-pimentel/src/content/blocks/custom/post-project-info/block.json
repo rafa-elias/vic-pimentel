@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "post-project-info.php"
+    },
+    "name": "acf/post-project-info",
+    "title": "Project Info",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "info-outline",
+    "keywords": [
+        "post-project-info"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/post-project-info/preview.png"
+        }
+    },
+    "style": "post-project-info-style",
+    "editorStyle": "post-project-info-style"
+}

@@ -1,0 +1,50 @@
+# NPM
+node_modules
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.bz2
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.tgz
+*.map
+
+# Logs and databases
+*.log
+*.sql
+
+# OS generated files
+**.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+.idea
+
+# Vim generated files
+*.un~
+
+# SASS
+**/.sass-cache
+**/.sass-cache/*
+**/.map
+
+# Composer
+wpcs/
+
+# Ctags
+tags
+tags.lock
+
+# Environment files
+.env
+.env.local
+
+# Development notes
+notes.md
+# Unicorn Studio preview renders (reference only, ~65MB) — the JSON exports are what ship.
+src/animations/*.mov

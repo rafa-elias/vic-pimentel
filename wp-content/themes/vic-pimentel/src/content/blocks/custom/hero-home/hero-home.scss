@@ -1,0 +1,82 @@
+@use 'util' as *;
+
+// Fluid with no max width: follows viewport height and width, also past 1920px.
+@include block('hero-home') {
+    @include panel-inset;
+
+    .hero-panel {
+        @include panel-radius;
+
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        min-height: 100svh;
+        overflow: hidden;
+        background: $black;
+
+        @include media('>=desktop-small') {
+            min-height: calc(100svh - #{rem(16)});
+        }
+
+        > .component-scene {
+            z-index: -1;
+        }
+    }
+
+    .hero-content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: $space-l;
+        width: 100%;
+        padding: calc(#{$header-height} + #{$space-l}) $space-l calc(#{$bottom-nav-height} + #{$space-l});
+
+        @include media('>=desktop-small') {
+            justify-content: space-between;
+            padding: calc(#{$header-height} + #{$space-2xl}) $space-l $space-l;
+        }
+    }
+
+    .hero-intro {
+        @include typography($p-2xl-bold);
+
+        max-width: rem(750);
+        margin: 0;
+        text-align: center;
+        color: $text-1;
+
+        .muted {
+            color: $text-3;
+        }
+    }
+
+    // Only the large viewports show the split headline (Figma 1024/600/380 frames omit it).
+    .hero-headline {
+        @include typography($heading-3xl);
+
+        @include sr-only;
+
+        font-size: fluid((150 104 54 54 32 24), $extrapolate: true);
+        line-height: 1;
+
+        @include media('>=desktop-small') {
+            position: static;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            overflow: visible;
+            clip: auto;
+            white-space: normal;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: $space-m;
+        }
+
+        span {
+            white-space: nowrap;
+        }
+    }
+}

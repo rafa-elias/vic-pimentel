@@ -1,0 +1,31 @@
+@use 'util' as *;
+
+@include block('post-media') {
+    figure {
+        display: flex;
+        flex-direction: column;
+        gap: $space-s;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .post-media-box {
+        overflow: hidden;
+        background: $surface;
+        border: 1px solid $border-hover;
+        border-radius: $radius-l;
+    }
+
+    .post-media-item {
+        aspect-ratio: 950 / 534;
+    }
+
+    .post-media-caption {
+        @include typography($p-2xs);
+
+        max-width: $wrapper-content;
+        margin: 0 auto;
+        width: 100%;
+        color: $text-3;
+    }
+}

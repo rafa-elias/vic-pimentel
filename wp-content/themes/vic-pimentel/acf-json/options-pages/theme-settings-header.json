@@ -1,0 +1,111 @@
+{
+    "key": "group_14254a4ec8700",
+    "title": "Theme Settings: Header",
+    "fields": [
+        {
+            "name": "header",
+            "label": "Header",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "name": "logo",
+                    "label": "Logo",
+                    "type": "image",
+                    "instructions": "Optional. Leave empty to use the built-in VicPimentel logotype (SVG).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "mime_types": "",
+                    "key": "field_6e4f77606d37a"
+                },
+                {
+                    "name": "location_title",
+                    "label": "Location — title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Based in Italy",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_a506e08dc6a06"
+                },
+                {
+                    "name": "location_subtitle",
+                    "label": "Location — subtitle (italic)",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Working Globally",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_af89e587aa145"
+                },
+                {
+                    "name": "",
+                    "label": "Navigation",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "The navigation pill uses the <strong>Header Navigation</strong> menu (Appearance → Menus). Point \"Contact\" to <code>#contact</code> to scroll to the footer.",
+                    "new_lines": "wpautop",
+                    "esc_html": 0,
+                    "key": "field_07ec941e285ed"
+                }
+            ],
+            "key": "field_2bf62e39a08f4"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "header_template"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

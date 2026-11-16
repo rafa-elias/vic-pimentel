@@ -1,0 +1,45 @@
+@use 'util' as *;
+
+@include block('post-project-info') {
+    .project-info-card {
+        @include glass($radius-l);
+
+        display: flex;
+        flex-direction: column;
+        gap: $space-m;
+        padding: $space-m rem(4);
+    }
+
+    .project-info-title {
+        @include typography($p-s-bold);
+
+        margin: 0;
+        padding: 0 $space-m;
+    }
+
+    .project-info-rows {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xs;
+        margin: 0;
+    }
+
+    .project-info-row {
+        display: flex;
+        justify-content: space-between;
+        gap: $space-m;
+        padding: 0 $space-m;
+
+        dt,
+        dd {
+            @include typography($p-xs);
+
+            margin: 0;
+        }
+
+        dd {
+            text-align: right;
+            color: $text-3;
+        }
+    }
+}

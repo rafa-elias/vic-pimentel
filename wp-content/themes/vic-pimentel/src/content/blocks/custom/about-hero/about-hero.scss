@@ -1,0 +1,68 @@
+@use 'util' as *;
+
+@include block('about-hero') {
+    position: relative;
+
+    .wrapper {
+        position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: $space-l;
+        padding-top: calc(#{$header-height} + #{$space-l});
+
+        @include media('>=tablet') {
+            grid-template-columns: auto minmax(0, 1fr);
+            padding-top: calc(#{$header-height} + #{$space-2xl});
+        }
+
+        // Centred 850 column with the media in the left gutter, once the gutter fits it.
+        @include media('>=desktop-medium') {
+            grid-template-columns: minmax(0, 1fr) minmax(0, $wrapper-content) minmax(0, 1fr);
+        }
+    }
+
+    .about-media {
+        @include media('>=tablet') {
+            max-width: rem(400);
+        }
+    }
+
+    .about-image {
+        position: relative;
+        width: fluid((300 260 220 200 190 190));
+        max-width: 100%;
+        aspect-ratio: 1;
+        overflow: hidden;
+        background: $mid-gray;
+        border-radius: $radius-l;
+
+        .picture,
+        .img {
+            @include fit;
+        }
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        gap: $space-l;
+    }
+
+    .about-headline {
+        @include typography($heading-xl);
+
+        margin: 0;
+    }
+
+    .about-text {
+        @include typography($p-l);
+
+        color: $text-3;
+
+        strong,
+        b {
+            font-weight: 400;
+            color: $text-1;
+        }
+    }
+}

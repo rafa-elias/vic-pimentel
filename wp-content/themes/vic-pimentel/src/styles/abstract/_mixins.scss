@@ -1,0 +1,238 @@
+@use 'sass:map';
+@use 'sass:math';
+@use 'functions' as *;
+@use 'variables' as *;
+@use 'breakpoints' as *;
+
+// Mixin to apply typography styles
+@mixin typography($style) {
+    color: map-get($style, color);
+    font-family: map-get($style, font-family);
+    font-size: map-get($style, font-size);
+    font-weight: map-get($style, font-weight);
+    line-height: map-get($style, line-height);
+    letter-spacing: map-get($style, letter-spacing);
+    text-decoration: map-get($style, text-decoration);
+    text-transform: map-get($style, text-transform);
+    -webkit-text-stroke: map-get($style, text-stroke);
+}
+
+// Turns an element into an arrow.
+@mixin arrow-clip($direction) {
+    clip-path: map.get(
+        (
+            up: polygon(50% 0, 100% 100%, 0 100%),
+            right: polygon(0 0, 100% 50%, 0 100%),
+            down: polygon(0 0, 100% 0, 50% 100%),
+            left: polygon(0 50%, 100% 0, 100% 100%),
+        ),
+        $direction
+    );
+}
+
+// A utility for border-radius.
+$chamfer-sizes: (
+    default: $radius-l,
+    large: $radius-xl,
+);
+
+@mixin chamfer($tl: 0, $tr: 0, $br: 0, $bl: 0, $size: 'default') {
+    $size-value: $size;
+
+    @if map.get($chamfer-sizes, $size) {
+        $size-value: map.get($chamfer-sizes, $size);
+    }
+
+    @if $tl == 1 {
+        border-top-left-radius: $size-value;
+    } @else {
+        border-top-left-radius: 0;
+    }
+
+    @if $tr == 1 {
+        border-top-right-radius: $size-value;
+    } @else {
+        border-top-right-radius: 0;
+    }
+
+    @if $br == 1 {
+        border-bottom-right-radius: $size-value;
+    } @else {
+        border-bottom-right-radius: 0;
+    }
+
+    @if $bl == 1 {
+        border-bottom-left-radius: $size-value;
+    } @else {
+        border-bottom-left-radius: 0;
+    }
+}
+
+// Blurs everything behind the element.
+@mixin frosted-glass($strength: 1px) {
+    backdrop-filter: blur($strength * 3);
+}
+
+// A utility for stacking elements.
+@mixin stack($direction, $gap: -1, $gap-max: -1) {
+    display: flex;
+
+    @if $gap-max > 0 {
+        gap: fluid($gap, $gap-max);
+    } @else if $gap > 0 {
+        gap: rem($gap);
+    }
+
+    @if $direction == 'v' {
+        flex-flow: column;
+    } @else if $direction == '>' {
+        flex-flow: row;
+    }
+}
+
+// A utility for applying a line limit to text
+@mixin line-clamp($lines) {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: #{$lines};
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// A utility for applying ratio to images
+@mixin ratio($width, $height) {
+    position: relative;
+    max-width: rem($width);
+    max-height: rem($height);
+    font-size: 0;
+
+    &::after {
+        display: inline-block;
+        padding-top: math.div($height, $width) * 100%;
+        width: 100%;
+        content: '';
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+// Fill the area of the parent.
+@mixin fit($fit-type: cover, $fit-position: center) {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+
+    @if $fit-position {
+        object-position: $fit-position;
+    }
+
+    @if $fit-type {
+        object-fit: $fit-type;
+    }
+}
+
+/**
+ * Generates padding classes for the section element
+ */
+@mixin padding-generator($direction, $size, $value) {
+    .block {
+        &.spacing-#{$direction}-#{$size} {
+            padding-#{$direction}: $value !important;
+        }
+    }
+}
+
+// Translucent "glass" surface used by cards, media boxes and info panels (Figma: white/4
+// fill, white/2 1px border, 20px background blur). $interactive adds the hover state.
+@mixin glass($radius: $radius-l, $interactive: false) {
+    background: $surface;
+    border: 1px solid $border;
+    border-radius: $radius;
+    backdrop-filter: $glass-blur;
+    -webkit-backdrop-filter: $glass-blur;
+
+    @if $interactive {
+        transition: background $fast $ease, border-color $fast $ease;
+
+        @media (hover: hover) {
+            &:hover {
+                background: $surface-hover;
+                border-color: $border-hover;
+            }
+        }
+    }
+}
+
+// Small round icon button (Figma: thumb-video / expand-modal / close-modal).
+@mixin icon-button($size: 24) {
+    display: inline-grid;
+    place-items: center;
+    width: rem($size);
+    height: rem($size);
+    padding: 0;
+    color: $text-3;
+    background: $surface-hover;
+    border: 1px solid $border;
+    border-radius: $radius-full;
+    box-shadow: 0 rem(2) rem(4) tint($black, 20);
+    backdrop-filter: $glass-blur;
+    -webkit-backdrop-filter: $glass-blur;
+    cursor: pointer;
+    transition: color $fast $ease, background $fast $ease, border-color $fast $ease;
+
+    @media (hover: hover) {
+        &:hover {
+            color: $text-2;
+            background: $surface-strong;
+            border-color: $border-hover;
+        }
+    }
+
+    svg {
+        display: block;
+        width: 50%;
+        height: 50%;
+    }
+}
+
+// Visually hidden but available to assistive tech.
+@mixin sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+// Inset rounded panel used by the home hero and the footer: 16px gutter + radius-xl from
+// 1280px, full-bleed with no radius below (Figma 1024/600/380 frames).
+@mixin panel-inset($bottom: 0) {
+    padding: 0;
+
+    @media (min-width: get-breakpoint('desktop-small')) {
+        padding: rem(16) rem(16) $bottom;
+    }
+}
+
+@mixin panel-radius {
+    border-radius: 0;
+
+    @media (min-width: get-breakpoint('desktop-small')) {
+        border-radius: $radius-xl;
+    }
+}

@@ -1,0 +1,44 @@
+@use 'util' as *;
+
+section.block {
+	// Interpolates between the mobile/desktop px values over 380–1920, like fluid().
+	&.spacing-top-custom {
+		$m: var(--spacing-top-mobile, var(--spacing-top-desktop, 0));
+		$d: var(--spacing-top-desktop, var(--spacing-top-mobile, 0));
+
+		padding-top: clamp(
+				calc(min(#{$m}, #{$d}) * 1px),
+				calc(#{$m} * 1px + (#{$d} - #{$m}) * (100vw - 380px) / 1540),
+				calc(max(#{$m}, #{$d}) * 1px)
+		);
+	}
+
+	&.spacing-bottom-custom {
+		$m: var(--spacing-bottom-mobile, var(--spacing-bottom-desktop, 0));
+		$d: var(--spacing-bottom-desktop, var(--spacing-bottom-mobile, 0));
+
+		padding-bottom: clamp(
+				calc(min(#{$m}, #{$d}) * 1px),
+				calc(#{$m} * 1px + (#{$d} - #{$m}) * (100vw - 380px) / 1540),
+				calc(max(#{$m}, #{$d}) * 1px)
+		);
+	}
+
+	// !important: block CSS prints after app.css, so a same-specificity block background
+	// would otherwise beat the editor's bg_color choice.
+	&.bg-background-1 {
+		background: $background-1 !important;
+	}
+
+	&.bg-background-2 {
+		background: $background-2 !important;
+	}
+
+	&.bg-background-3 {
+		background: $background-3 !important;
+	}
+
+	&.bg-background-4 {
+		background: $background-4 !important;
+	}
+}

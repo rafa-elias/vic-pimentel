@@ -1,0 +1,78 @@
+@use 'util' as *;
+
+@include component('copy-email') {
+    &.style-box {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-s;
+        max-width: 100%;
+        padding: $space-xs $space-xs $space-xs $space-s;
+        background: $mid-gray;
+        border: 1px solid $border-strong;
+        border-radius: $radius-m;
+    }
+
+    .copy-email-address {
+        @include typography($p-l);
+
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: $text-1;
+    }
+
+    .copy-email-button {
+        @include typography($action-m);
+
+        display: inline-flex;
+        align-items: center;
+        gap: $space-xs;
+        flex-shrink: 0;
+        height: rem(36);
+        padding: 0 $space-xs;
+        color: $text-1;
+        background: $surface;
+        border-radius: $radius-m;
+        backdrop-filter: $glass-blur;
+        -webkit-backdrop-filter: $glass-blur;
+        transition: background $fast $ease;
+
+        &:hover,
+        &:focus-visible {
+            background: $surface-hover;
+        }
+    }
+
+    .copy-icon {
+        display: inline-grid;
+        place-items: center;
+        width: rem(14);
+        height: rem(14);
+
+        svg {
+            width: rem(12);
+            height: auto;
+        }
+    }
+
+    .icon-check {
+        display: none;
+    }
+
+    &.is-copied {
+        .icon-copy {
+            display: none;
+        }
+
+        .icon-check {
+            display: inline-grid;
+        }
+    }
+
+    &.style-inline .copy-email-link {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+}

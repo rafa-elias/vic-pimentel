@@ -1,0 +1,259 @@
+{
+    "key": "group_0190a66f1d5f8",
+    "title": "Post Type: Project",
+    "fields": [
+        {
+            "name": "",
+            "label": "Card & hero",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_5215d2581c5f0"
+        },
+        {
+            "name": "company_name",
+            "label": "Company / client name",
+            "type": "text",
+            "instructions": "Shown on the card: \"Category in Company Name\".",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_7e225b31a9cec"
+        },
+        {
+            "name": "media_image",
+            "label": "Thumbnail image",
+            "type": "image",
+            "instructions": "Required. Card thumbnail and project hero (also used as the featured image and the video poster).",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "",
+            "key": "field_0a09bd2004ef9"
+        },
+        {
+            "name": "media_video",
+            "label": "Looping video (optional)",
+            "type": "file",
+            "instructions": "MP4/WebM, muted loop. When set it replaces the image: plays on hover on cards and autoplays on the project page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "mime_types": "mp4,webm",
+            "key": "field_1d10763d967fe"
+        },
+        {
+            "name": "favicon",
+            "label": "Client favicon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "png,jpg,jpeg,webp,svg",
+            "key": "field_a665ef1862c73"
+        },
+        {
+            "name": "show_favicon",
+            "label": "Show favicon",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_9d3f356c50fb6"
+        },
+        {
+            "name": "",
+            "label": "Highlights",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "key": "field_990f221f04250"
+        },
+        {
+            "name": "show_highlights",
+            "label": "Show \"Highlights in This Project\"",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_8007d60c7c8c7"
+        },
+        {
+            "name": "highlights",
+            "label": "Highlights",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_8007d60c7c8c7",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "button_label": "Add highlight",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "name": "title",
+                    "label": "Section name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_a852fdeed817d",
+                    "parent_repeater": "field_d05a3e6d9bdda"
+                },
+                {
+                    "name": "image",
+                    "label": "Image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "mime_types": "",
+                    "key": "field_928a9a1e3a58b",
+                    "parent_repeater": "field_d05a3e6d9bdda"
+                },
+                {
+                    "name": "video",
+                    "label": "Video (optional)",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "mime_types": "mp4,webm",
+                    "key": "field_d7cf6d2f1a870",
+                    "parent_repeater": "field_d05a3e6d9bdda"
+                }
+            ],
+            "key": "field_d05a3e6d9bdda",
+            "collapsed": "field_a852fdeed817d"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "excerpt",
+        "discussion",
+        "comments",
+        "trackbacks",
+        "tags",
+        "send-trackbacks",
+        "format"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

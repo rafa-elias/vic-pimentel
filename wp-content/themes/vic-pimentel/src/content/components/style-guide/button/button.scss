@@ -1,0 +1,101 @@
+@use 'util' as *;
+
+@include component('button') {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $space-xs;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color $fast $ease, background $fast $ease, border-color $fast $ease;
+
+    .button-icon {
+        display: inline-flex;
+
+        svg {
+            width: auto;
+            height: rem(14);
+        }
+    }
+
+    // about-button: pill, white/8 → white/10, text white/60 → white/80
+    &.style-pill {
+        @include typography($action-l);
+
+        height: rem(36);
+        padding: 0 $space-s;
+        color: $text-3;
+        background: $surface-hover;
+        border-radius: $radius-full;
+
+        &:hover,
+        &:focus-visible {
+            color: $text-2;
+            background: $surface-strong;
+        }
+    }
+
+    // login-button: tall glass pill, full width
+    &.style-glass {
+        @include typography($action-l);
+
+        width: 100%;
+        height: rem(50);
+        padding: rem(4) $space-s;
+        color: $text-3;
+        background: $surface-hover;
+        border-radius: $radius-full;
+        backdrop-filter: $glass-blur;
+        -webkit-backdrop-filter: $glass-blur;
+
+        &:hover,
+        &:focus-visible {
+            color: $text-2;
+            background: $surface-strong;
+        }
+
+        &:disabled {
+            cursor: progress;
+            opacity: 0.6;
+        }
+    }
+
+    // button-1: text + chevron, white/80 → white
+    &.style-text {
+        @include typography($action-l);
+
+        color: $text-2;
+
+        .button-icon svg {
+            height: rem(14);
+        }
+
+        &:hover,
+        &:focus-visible {
+            color: $text-1;
+        }
+    }
+
+    // download-link: white/50 → white/80
+    &.style-download {
+        @include typography($link-m);
+
+        gap: $space-2xs;
+        color: $text-4;
+
+        .button-icon {
+            justify-content: center;
+            width: rem(18);
+
+            svg {
+                height: rem(12);
+            }
+        }
+
+        &:hover,
+        &:focus-visible {
+            color: $text-2;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use 'util' as *;
+
+@include component('headline') {
+    em,
+    i {
+        font-style: italic;
+    }
+
+    @each $name, $style in (
+        'heading-3xl': $heading-3xl,
+        'heading-2xl': $heading-2xl,
+        'heading-xl': $heading-xl,
+        'heading-l': $heading-l,
+        'heading-m': $heading-m,
+        'heading-s': $heading-s,
+        'heading-xs': $heading-xs,
+    ) {
+        &.style-#{$name} {
+            @include typography($style);
+        }
+    }
+}

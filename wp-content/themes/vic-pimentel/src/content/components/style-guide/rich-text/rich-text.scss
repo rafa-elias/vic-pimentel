@@ -1,0 +1,61 @@
+@use 'util' as *;
+
+@include component('rich-text') {
+    > * {
+        &:not(:last-child) {
+            margin-bottom: 1em;
+        }
+    }
+
+    strong,
+    b {
+        font-weight: 600;
+        color: $text-1;
+    }
+
+    em,
+    i {
+        font-style: italic;
+    }
+
+    ul,
+    ol {
+        padding-left: rem(20);
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    ol {
+        list-style: decimal-leading-zero;
+    }
+
+    a {
+        color: $text-1;
+        text-decoration: underline;
+        text-decoration-color: $text-5;
+        text-underline-offset: 0.2em;
+        transition: text-decoration-color $fast $ease;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration-color: currentColor;
+        }
+    }
+
+    p,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+    }
+}

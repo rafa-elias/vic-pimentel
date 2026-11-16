@@ -1,0 +1,21 @@
+@use 'util' as *;
+
+@include block('post-text') {
+    .column-content {
+        display: flex;
+        flex-direction: column;
+        gap: $space-m;
+    }
+
+    .post-text-heading {
+        @include typography($heading-xs);
+
+        margin: 0;
+    }
+
+    .post-text-copy {
+        @include typography($p-l);
+
+        color: $text-3;
+    }
+}

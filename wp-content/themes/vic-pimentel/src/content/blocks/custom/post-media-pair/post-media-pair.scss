@@ -1,0 +1,37 @@
+@use 'util' as *;
+
+@include block('post-media-pair') {
+    .post-media-pair-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: $space-l;
+
+        @include media('>=mobile-large') {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    figure {
+        display: flex;
+        flex-direction: column;
+        gap: $space-s;
+        margin: 0;
+    }
+
+    .post-media-box {
+        overflow: hidden;
+        background: $surface;
+        border: 1px solid $border-hover;
+        border-radius: $radius-l;
+    }
+
+    .post-media-item {
+        aspect-ratio: 1;
+    }
+
+    .post-media-caption {
+        @include typography($p-2xs);
+
+        color: $text-3;
+    }
+}

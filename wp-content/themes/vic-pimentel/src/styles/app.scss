@@ -1,0 +1,23 @@
+// Globals
+@import 'common/tokens';
+@import 'common/reset';
+@import 'common/globals';
+@import "common/section-spacing";
+@import 'common/critical-overlays';
+
+body .is-root-container {
+    // Common overrides
+    @import 'common/wrapper';
+    @import 'common/block';
+    @import 'common/typography';
+    @import 'common/page-light';
+}
+
+html {
+    --app-height: #{100vh};
+}
+
+html,
+body {
+    height: var(--app-height)
+}

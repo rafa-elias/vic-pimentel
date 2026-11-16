@@ -1,0 +1,47 @@
+@use 'util' as *;
+
+h1, h2, h3, h4, h5, h6 {
+	@include typography($heading-m);
+
+	em, i {
+		font-style: italic;
+	}
+}
+
+$text-styles: (
+	'heading-3xl': $heading-3xl,
+	'heading-2xl': $heading-2xl,
+	'heading-xl': $heading-xl,
+	'heading-l': $heading-l,
+	'heading-m': $heading-m,
+	'heading-s': $heading-s,
+	'heading-xs': $heading-xs,
+	'p-2xl': $p-2xl,
+	'p-2xl-bold': $p-2xl-bold,
+	'p-xl': $p-xl,
+	'p-xl-bold': $p-xl-bold,
+	'p-l': $p-l,
+	'p-l-bold': $p-l-bold,
+	'p-m': $p-m,
+	'p-m-bold': $p-m-bold,
+	'p-s': $p-s,
+	'p-s-bold': $p-s-bold,
+	'p-xs': $p-xs,
+	'p-xs-bold': $p-xs-bold,
+	'p-2xs': $p-2xs,
+	'action-l': $action-l,
+	'action-m': $action-m,
+	'link-m': $link-m,
+	'special-1': $special-1,
+	'special-2': $special-2,
+);
+
+@each $name, $style in $text-styles {
+	.#{$name} {
+		@include typography($style);
+	}
+}
+
+p {
+	@include typography($p-l);
+}

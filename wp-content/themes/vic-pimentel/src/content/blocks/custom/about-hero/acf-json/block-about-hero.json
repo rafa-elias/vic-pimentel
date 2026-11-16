@@ -1,0 +1,78 @@
+{
+    "key": "group_4bd808df675c9",
+    "title": "Block: About-Hero",
+    "fields": [
+        {
+            "name": "image",
+            "label": "Image or GIF",
+            "type": "image",
+            "instructions": "Square. GIFs are served at full size so they keep animating.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "mime_types": "",
+            "key": "field_657bcb3a2cb61"
+        },
+        {
+            "name": "headline",
+            "label": "Headline",
+            "type": "textarea",
+            "instructions": "Wrap words in *asterisks* to set them in italic.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": "",
+            "default_value": "",
+            "key": "field_0a4aae28b378d"
+        },
+        {
+            "name": "text",
+            "label": "Text",
+            "type": "wysiwyg",
+            "instructions": "Bold text renders brighter.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0,
+            "key": "field_839118644ab1a"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/about-hero"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

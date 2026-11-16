@@ -1,0 +1,110 @@
+{
+    "key": "group_0c0b5e4ca8fff",
+    "title": "Block: Hero-Home",
+    "fields": [
+        {
+            "name": "intro",
+            "label": "Intro (bright)",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": "",
+            "default_value": "",
+            "key": "field_5a63eca96c00f"
+        },
+        {
+            "name": "intro_muted",
+            "label": "Intro continuation (dimmed)",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": "",
+            "default_value": "",
+            "key": "field_564e6b4691334"
+        },
+        {
+            "name": "headline_left",
+            "label": "Headline — left",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Creative",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_4c8060baf6793"
+        },
+        {
+            "name": "headline_center",
+            "label": "Headline — centre",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "&",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_f6f1ead41de0a"
+        },
+        {
+            "name": "headline_right",
+            "label": "Headline — right",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Cool Stuff",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_930c773bebf39"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/hero-home"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

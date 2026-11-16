@@ -1,0 +1,77 @@
+// ACF admin css
+.acf-repeater .acf-row-handle {
+    padding: 0 !important;
+}
+
+.acf-fields > .acf-field {
+    padding: 10px !important;
+}
+
+.admin-titulo .acf-editor-wrap iframe, .admin-titulo .acf-editor-wrap textarea {
+    height: 56px !important;
+    min-height: 56px;
+}
+
+.admin-80 .acf-editor-wrap iframe, .admin-80 .acf-editor-wrap textarea {
+    height: 80px !important;
+    min-height: 80px;
+}
+
+.admin-100 .acf-editor-wrap iframe, .admin-100 .acf-editor-wrap textarea {
+    height: 100px !important;
+    min-height: 100px;
+}
+
+.admin-150 .acf-editor-wrap iframe, .admin-150 .acf-editor-wrap textarea {
+    height: 150px !important;
+    min-height: 150px;
+}
+
+.admin-200 .acf-editor-wrap iframe, .admin-200 .acf-editor-wrap textarea {
+    height: 200px !important;
+    min-height: 200px;
+}
+
+.admin-250 .acf-editor-wrap iframe, .admin-250 .acf-editor-wrap textarea {
+    height: 250px !important;
+    min-height: 250px;
+}
+
+.admin-350 .acf-editor-wrap iframe, .admin-350 .acf-editor-wrap textarea {
+    height: 350px !important;
+    min-height: 350px;
+}
+
+.admin-400 .acf-editor-wrap iframe, .admin-400 .acf-editor-wrap textarea {
+    height: 400px !important;
+    min-height: 400px;
+}
+
+.admin-450 .acf-editor-wrap iframe, .admin-450 .acf-editor-wrap textarea {
+    height: 450px !important;
+    min-height: 450px;
+}
+
+// Blocks
+.acf-repeater .acf-row-handle {
+    padding: 0 !important;
+}
+
+.acf-fields > .acf-field {
+    padding: 10px !important;
+}
+
+@media (min-width: 782px) {
+    .interface-interface-skeleton__sidebar {
+        //width: 380px !important;
+    }
+
+    .interface-complementary-area__fill,
+    .interface-complementary-area.editor-sidebar {
+        width: 420px !important;
+    }
+}
+
+.hammer-init-block-js {
+    display: none !important;
+}

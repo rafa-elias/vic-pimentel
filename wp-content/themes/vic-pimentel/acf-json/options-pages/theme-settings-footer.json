@@ -1,0 +1,226 @@
+{
+    "key": "group_0dde39ec9ebef",
+    "title": "Theme Settings: Footer",
+    "fields": [
+        {
+            "name": "footer",
+            "label": "Footer",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "name": "heading",
+                    "label": "Heading",
+                    "type": "text",
+                    "instructions": "Wrap words in *asterisks* to set them in italic.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Get *In Touch*",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_0076761a00a58"
+                },
+                {
+                    "name": "email",
+                    "label": "Email (copy button)",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "mr.vicpimentel@gmail.com",
+                    "key": "field_61be6ed3db910"
+                },
+                {
+                    "name": "columns",
+                    "label": "Link columns",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 3,
+                    "button_label": "Add column",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "name": "title",
+                            "label": "Title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "key": "field_dc87e92521e63",
+                            "parent_repeater": "field_50bcf126fafb8"
+                        },
+                        {
+                            "name": "links",
+                            "label": "Links",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "pagination": 0,
+                            "min": 0,
+                            "max": 0,
+                            "button_label": "Add link",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "name": "link",
+                                    "label": "Link",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "70",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "key": "field_fea4d7479fb17",
+                                    "parent_repeater": "field_abe5297f658fa"
+                                },
+                                {
+                                    "name": "is_download",
+                                    "label": "Download link",
+                                    "type": "true_false",
+                                    "instructions": "Adds the download icon and the download attribute.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "30",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": "",
+                                    "key": "field_74a8dd837ee65",
+                                    "parent_repeater": "field_abe5297f658fa"
+                                }
+                            ],
+                            "key": "field_abe5297f658fa",
+                            "collapsed": "field_fea4d7479fb17",
+                            "parent_repeater": "field_50bcf126fafb8"
+                        }
+                    ],
+                    "key": "field_50bcf126fafb8",
+                    "collapsed": "field_dc87e92521e63"
+                },
+                {
+                    "name": "signature",
+                    "label": "Bottom left",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "*Vic*Pimentel",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_b44dff393e68c"
+                },
+                {
+                    "name": "text",
+                    "label": "Bottom centre text",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2,
+                    "new_lines": "",
+                    "default_value": "",
+                    "key": "field_1e05bb4f8804f"
+                },
+                {
+                    "name": "label",
+                    "label": "Bottom right",
+                    "type": "text",
+                    "instructions": "{year} is replaced with the current year.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "*Portfolio* {year}",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_68fb3bfc08337"
+                }
+            ],
+            "key": "field_b41bc498da3ae"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "footer_template"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

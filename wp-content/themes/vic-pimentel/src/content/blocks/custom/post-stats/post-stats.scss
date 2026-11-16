@@ -1,0 +1,42 @@
+@use 'util' as *;
+
+@include block('post-stats') {
+    .post-stats-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: $space-l;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        @include media('>=mobile-large') {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    .post-stat {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xs;
+    }
+
+    dt,
+    dd {
+        margin: 0;
+    }
+
+    .post-stat-overline {
+        @include typography($p-l-bold);
+
+        color: $text-3;
+    }
+
+    .post-stat-value {
+        @include typography($p-xl-bold);
+    }
+
+    .post-stat-text {
+        @include typography($p-l-bold);
+
+        color: $text-3;
+    }
+}

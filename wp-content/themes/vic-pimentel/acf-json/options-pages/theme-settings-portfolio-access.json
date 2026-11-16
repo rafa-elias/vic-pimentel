@@ -1,0 +1,319 @@
+{
+    "key": "group_a5d99ff00e124",
+    "title": "Theme Settings: Portfolio Access",
+    "fields": [
+        {
+            "name": "",
+            "label": "Access",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_e95c7565940eb"
+        },
+        {
+            "name": "access_enabled",
+            "label": "Password-protect the whole site",
+            "type": "true_false",
+            "instructions": "Every page requires the password. Logged-in editors are never blocked.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_12abf719e2eb3"
+        },
+        {
+            "name": "access_password",
+            "label": "Password",
+            "type": "text",
+            "instructions": "Visitors type this to unlock the site. Changing it signs every visitor out.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_43456b3361504"
+        },
+        {
+            "name": "access_cookie_days",
+            "label": "Stay logged in for (days)",
+            "type": "number",
+            "instructions": "How long a visitor stays unlocked before the password is asked again.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 2,
+            "min": 1,
+            "max": 60,
+            "step": 1,
+            "key": "field_45a716aaeed54"
+        },
+        {
+            "name": "access_redirect",
+            "label": "After login go to",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "home": "Home page",
+                "requested": "The page the visitor originally asked for"
+            },
+            "default_value": "home",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "key": "field_d9ff27628bef6"
+        },
+        {
+            "name": "",
+            "label": "Login screen",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_e8706b5e35bb8"
+        },
+        {
+            "name": "access_title",
+            "label": "Title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Welcome To My Portfolio!",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_9f1c583902714"
+        },
+        {
+            "name": "access_text",
+            "label": "Text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": "",
+            "default_value": "Designing is an intricate dance between utility and aesthetics, where every choice can make or break the final outcome. It encompasses.",
+            "key": "field_e9d536ce61822"
+        },
+        {
+            "name": "access_placeholder",
+            "label": "Field placeholder",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Password",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_f48e345db2e24"
+        },
+        {
+            "name": "access_button",
+            "label": "Button label",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Access Now",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_f54cf399a6fb5"
+        },
+        {
+            "name": "access_contact_text",
+            "label": "Contact line",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "If you don't have a password contact me",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_d67ddbc850c5d"
+        },
+        {
+            "name": "access_contact_email",
+            "label": "Contact email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "mr.vicpimentel@gmail.com",
+            "key": "field_46bb951e13449"
+        },
+        {
+            "name": "access_error",
+            "label": "Wrong password message",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "That password is not correct. Please try again.",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_1afa81f663941"
+        },
+        {
+            "name": "",
+            "label": "Loading screen",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0,
+            "key": "field_efd977c5c5ac3"
+        },
+        {
+            "name": "access_loading_title",
+            "label": "Title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "This Contains Confidential Information",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_986f2272605c5"
+        },
+        {
+            "name": "access_loading_text",
+            "label": "Text",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "rows": 3,
+            "new_lines": "",
+            "default_value": "Design is an intricate dance between functionality and aesthetics, where every choice can profoundly influence the final outcome. It encompasses a wide array of disciplines, from graphic design to product development, each offering unique challenges and opportunities. To embark on a successful design journey.",
+            "key": "field_6a3de92bc6293"
+        },
+        {
+            "name": "access_loading_seconds",
+            "label": "Show for (seconds)",
+            "type": "number",
+            "instructions": "Time the visitor gets to read the message before being redirected.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 4,
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "key": "field_d70f0e1cc3310"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "portfolio_access_template"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

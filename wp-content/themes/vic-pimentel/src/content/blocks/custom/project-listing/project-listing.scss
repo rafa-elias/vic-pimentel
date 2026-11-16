@@ -1,0 +1,184 @@
+@use 'util' as *;
+
+@include block('project-listing') {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $space-m;
+    }
+
+    .listing-bar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-xs;
+    }
+
+    .listing-tabs {
+        position: relative;
+        display: flex;
+        gap: $space-3xs;
+        max-width: 100%;
+        overflow-x: auto;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    // Figma: category-tab
+    .listing-tab {
+        @include typography($action-m);
+
+        flex-shrink: 0;
+        height: rem(40);
+        padding: $space-xs $space-s;
+        color: $text-5;
+        white-space: nowrap;
+        background: transparent;
+        border-radius: $radius-full;
+        backdrop-filter: $glass-blur;
+        -webkit-backdrop-filter: $glass-blur;
+        transition: color $fast $ease, background $fast $ease;
+
+        &:hover,
+        &:focus-visible {
+            color: $text-3;
+        }
+
+        &.is-active {
+            color: $text-1;
+            background: $surface;
+        }
+    }
+
+    // Sliding pill behind the active tab (listing JS adds it).
+    .listing-tab-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: rem(40);
+        background: $surface;
+        border-radius: $radius-full;
+        transition: transform $slow $ease-out, width $slow $ease-out;
+        pointer-events: none;
+    }
+
+    .has-indicator .listing-tab {
+        position: relative;
+
+        &.is-active {
+            background: transparent;
+        }
+    }
+
+    .listing-results {
+        @include typography($p-xs);
+
+        margin: 0;
+        color: $text-5;
+        white-space: nowrap;
+        transition: opacity $fast $ease;
+
+        &.is-updating {
+            opacity: 0;
+        }
+    }
+
+    .listing-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: $space-l $space-m;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include media('>=mobile-large') {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include media('>=desktop-medium') {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        > li {
+            transition: opacity 200ms $ease, transform 200ms $ease;
+        }
+
+        &.is-leaving > li {
+            opacity: 0;
+            transform: translateY(rem(8));
+        }
+
+        &.is-entering > li {
+            animation: listing-card-in 600ms $ease-out both;
+            animation-delay: calc(var(--i, 0) * 45ms);
+        }
+    }
+
+    // Placeholder cards while a tab request is in flight.
+    .listing-skeleton {
+        display: flex;
+        flex-direction: column;
+        gap: $space-s;
+
+        .skeleton-box,
+        .skeleton-line {
+            display: block;
+            overflow: hidden;
+            background: $surface;
+            border: 1px solid $border;
+            background-image: linear-gradient(100deg, transparent 20%, tint($white, 5) 50%, transparent 80%);
+            background-size: 200% 100%;
+            animation: listing-shimmer 1.2s linear infinite;
+        }
+
+        .skeleton-box {
+            aspect-ratio: 429 / 304;
+            border-radius: $radius-l;
+        }
+
+        .skeleton-line {
+            width: 60%;
+            height: rem(18);
+            border-radius: $radius-s;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .listing-tab-indicator,
+        .listing-grid > li {
+            transition: none;
+        }
+
+        .listing-grid.is-entering > li,
+        .listing-skeleton .skeleton-box,
+        .listing-skeleton .skeleton-line {
+            animation: none;
+        }
+    }
+}
+
+@keyframes listing-card-in {
+    from {
+        opacity: 0;
+        transform: translateY(rem(16));
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes listing-shimmer {
+    from {
+        background-position: 150% 0;
+    }
+
+    to {
+        background-position: -50% 0;
+    }
+}

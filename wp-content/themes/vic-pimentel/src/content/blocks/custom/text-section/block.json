@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "text-section.php"
+    },
+    "name": "acf/text-section",
+    "title": "Text Section",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "text",
+    "keywords": [
+        "text-section"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/text-section/preview.png"
+        }
+    },
+    "style": "text-section-style",
+    "editorStyle": "text-section-style"
+}

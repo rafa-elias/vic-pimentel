@@ -1,0 +1,236 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'functions' as *;
+
+// =============================================================================
+// Synced from the Vic Pimentel Figma file (QAZnKg9XaNh8sOhZbxXgEl).
+// Every 6-value list below is written in Figma mode order:
+//   desktop-large 1920 · desktop-medium 1440 · desktop-small 1280 · tablet 1024 · mobile-large 600 · mobile-small 380
+// and is turned into a piecewise-fluid value by fluid() (abstract/_functions.scss).
+// Fluid tokens are emitted once as CSS custom properties on :root (common/_tokens.scss);
+// the SCSS variables below only reference them, so the long calc() is printed once.
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Colors — Figma "Color" collection: 5 bases, each with an opacity ramp.
+// -----------------------------------------------------------------------------
+$black: #030303;
+$heavy-gray: #0B0B0B;
+$mid-gray: #141414;
+$low-gray: #1B1B1B;
+$white: #FFFFFF;
+
+// Opacity ramp helper — Figma's `white/60` is tint($white, 60). Always goes through
+// color.adjust() (never an rgba() literal), per the theme's color rules.
+@function tint($base, $percent) {
+    @return color.adjust($base, $alpha: math.div($percent, 100) - 1);
+}
+
+// Page backgrounds (bg_color global field).
+$background-1: $black;
+$background-2: $heavy-gray;
+$background-3: $mid-gray;
+$background-4: $low-gray;
+
+// Text tiers.
+$text-1: $white;
+$text-2: tint($white, 80);
+$text-3: tint($white, 60);
+$text-4: tint($white, 50);
+$text-5: tint($white, 30);
+
+// Glass surfaces (cards, media boxes, info panels) — translucent white + backdrop blur.
+$surface: tint($white, 4);
+$surface-hover: tint($white, 8);
+$surface-strong: tint($white, 10);
+$border: tint($white, 2);
+$border-hover: tint($white, 4);
+$border-strong: tint($white, 8);
+$divider: tint($white, 10);
+$chip-border: tint($white, 50);
+
+$overlay: tint($black, 50);
+$status-error: #E5484D;
+
+// -----------------------------------------------------------------------------
+// Fonts
+// -----------------------------------------------------------------------------
+$font-1: "Instrument Serif", "Instrument Serif Fallback", "Times New Roman", serif;
+$font-2: "Inter", "Inter Fallback", Arial, sans-serif;
+
+$letter-spacing: -0.03em;
+
+// -----------------------------------------------------------------------------
+// Fluid token tables (px, Figma mode order). Read by common/_tokens.scss.
+// -----------------------------------------------------------------------------
+$font-size-tokens: (
+    'h-3xl': (150 104 54 54 32 24),
+    'h-2xl': (74 64 54 44 32 24),
+    'h-xl': (64 54 44 44 32 24),
+    'h-l': (48 40 40 42 32 22),
+    'h-m': (40 40 40 32 24 22),
+    'h-s': (32 32 32 26 24 22),
+    'h-xs': (26 26 26 24 22 22),
+    'p-2xl': (24 24 24 20 18 18),
+    'p-xl': (22 22 22 20 18 18),
+    'p-l': (20 20 20 18 16 16),
+    'p-m': (18 18 18 16 14 14),
+    'p-s': (16 16 16 16 14 14),
+    'p-xs': (14 14 14 12 12 12),
+    'p-2xs': (12 12 12 12 12 12),
+    'a-xl': (20 20 20 18 16 16),
+    'a-l': (18 18 18 16 14 14),
+    'a-m': (16 16 16 16 14 14),
+    'a-s': (14 14 14 14 14 14),
+    'l-xl': (20 20 20 18 16 16),
+    'l-l': (18 18 18 16 14 14),
+    'l-m': (16 16 16 16 14 14),
+    'l-s': (14 14 14 14 14 14),
+    's-1': (16 14 12 12 12 12),
+    's-2': (16 14 12 12 12 12),
+);
+
+// gap/*, horizontal-padding/* and vertical-padding/* share one scale in Figma.
+$space-tokens: (
+    '2xl': (128 128 128 64 48 48),
+    'xl': (64 64 64 48 24 24),
+    'l': (48 48 48 24 16 16),
+    'm': (24 24 24 16 16 16),
+    's': (16 16 16 16 16 16),
+    'xs': (8 8 8 8 8 8),
+    '2xs': (4 4 4 4 4 4),
+    '3xs': (2 2 2 2 2 2),
+);
+
+$radius-tokens: (
+    'xl': (12 12 12 12 6 6),
+    'l': (8 8 8 8 4 4),
+    'm': (4 4 4 4 2 2),
+    's': (2 2 2 2 1 1),
+);
+
+// -----------------------------------------------------------------------------
+// Font sizes
+// -----------------------------------------------------------------------------
+$fs-h-3xl: var(--fs-h-3xl);
+$fs-h-2xl: var(--fs-h-2xl);
+$fs-h-xl: var(--fs-h-xl);
+$fs-h-l: var(--fs-h-l);
+$fs-h-m: var(--fs-h-m);
+$fs-h-s: var(--fs-h-s);
+$fs-h-xs: var(--fs-h-xs);
+$fs-p-2xl: var(--fs-p-2xl);
+$fs-p-xl: var(--fs-p-xl);
+$fs-p-l: var(--fs-p-l);
+$fs-p-m: var(--fs-p-m);
+$fs-p-s: var(--fs-p-s);
+$fs-p-xs: var(--fs-p-xs);
+$fs-p-2xs: var(--fs-p-2xs);
+$fs-a-xl: var(--fs-a-xl);
+$fs-a-l: var(--fs-a-l);
+$fs-a-m: var(--fs-a-m);
+$fs-a-s: var(--fs-a-s);
+$fs-l-xl: var(--fs-l-xl);
+$fs-l-l: var(--fs-l-l);
+$fs-l-m: var(--fs-l-m);
+$fs-l-s: var(--fs-l-s);
+$fs-s-1: var(--fs-s-1);
+$fs-s-2: var(--fs-s-2);
+
+// -----------------------------------------------------------------------------
+// Text styles (Figma text styles 1:1)
+// -----------------------------------------------------------------------------
+@function _serif($size) {
+    @return (font-family: $font-1, font-size: $size, font-weight: 400, line-height: 1.1, letter-spacing: $letter-spacing);
+}
+
+@function _sans($size, $weight: 400, $line-height: 1.3) {
+    @return (font-family: $font-2, font-size: $size, font-weight: $weight, line-height: $line-height, letter-spacing: $letter-spacing);
+}
+
+$heading-3xl: _serif($fs-h-3xl);
+$heading-2xl: _serif($fs-h-2xl);
+$heading-xl: _serif($fs-h-xl);
+$heading-l: _serif($fs-h-l);
+$heading-m: _serif($fs-h-m);
+$heading-s: _serif($fs-h-s);
+$heading-xs: _serif($fs-h-xs);
+
+$p-2xl: _sans($fs-p-2xl);
+$p-2xl-bold: _sans($fs-p-2xl, 600);
+$p-xl: _sans($fs-p-xl);
+$p-xl-bold: _sans($fs-p-xl, 600);
+$p-l: _sans($fs-p-l);
+$p-l-bold: _sans($fs-p-l, 600);
+$p-m: _sans($fs-p-m);
+$p-m-bold: _sans($fs-p-m, 600);
+$p-s: _sans($fs-p-s);
+$p-s-bold: _sans($fs-p-s, 600);
+$p-xs: _sans($fs-p-xs);
+$p-xs-bold: _sans($fs-p-xs, 600);
+$p-2xs: _sans($fs-p-2xs);
+$p-2xs-bold: _sans($fs-p-2xs, 600);
+
+$action-xl: _sans($fs-a-xl, 600, 1.1);
+$action-l: _sans($fs-a-l, 600, 1.1);
+$action-m: _sans($fs-a-m, 600, 1.1);
+$action-s: _sans($fs-a-s, 600, 1.1);
+
+$link-xl: _sans($fs-l-xl, 400, 1.1);
+$link-l: _sans($fs-l-l, 400, 1.1);
+$link-m: _sans($fs-l-m, 400, 1.1);
+$link-s: _sans($fs-l-s, 400, 1.1);
+
+$special-1: _serif($fs-s-1);
+$special-2: _sans($fs-s-2, 600, 1.1);
+
+// -----------------------------------------------------------------------------
+// Spacing / radius
+// -----------------------------------------------------------------------------
+$space-2xl: var(--space-2xl);
+$space-xl: var(--space-xl);
+$space-l: var(--space-l);
+$space-m: var(--space-m);
+$space-s: rem(16);
+$space-xs: rem(8);
+$space-2xs: rem(4);
+$space-3xs: rem(2);
+
+$radius-xl: var(--radius-xl);
+$radius-l: var(--radius-l);
+$radius-m: var(--radius-m);
+$radius-s: var(--radius-s);
+$radius-full: rem(9999);
+
+$horizontal-padding: $space-l;
+
+$vertical-none: 0;
+$vertical-small: $space-m;
+$vertical-medium: $space-l;
+$vertical-default: $space-xl;
+$vertical-large: $space-2xl;
+
+// Layout widths
+$wrapper-default: rem(1920);
+$wrapper-modal: rem(1440);
+$wrapper-media: rem(950);
+$wrapper-content: rem(850);
+$wrapper-narrow: rem(500);
+$wrapper-full: 100%;
+
+$header-height: fluid((100 100 100 80 50 50));
+$bottom-nav-height: rem(74);
+
+// Blur
+$glass-blur: blur(rem(20));
+
+// -----------------------------------------------------------------------------
+// Transitions
+// -----------------------------------------------------------------------------
+$quick: 100ms;
+$fast: 250ms;
+$slow: 500ms;
+$smooth: 1000ms;
+$static: 0s;
+$ease: cubic-bezier(0.5, 0, 0, 1);
+$ease-out: cubic-bezier(0.22, 1, 0.36, 1);

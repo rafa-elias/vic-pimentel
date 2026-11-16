@@ -1,0 +1,32 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "project-listing.php"
+    },
+    "name": "acf/project-listing",
+    "title": "Project Listing",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "grid-view",
+    "keywords": [
+        "project-listing"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/project-listing/preview.png"
+        }
+    },
+    "style": "project-listing-style",
+    "editorStyle": "project-listing-style",
+    "script": "project-listing-script",
+    "editorScript": "project-listing-script"
+}

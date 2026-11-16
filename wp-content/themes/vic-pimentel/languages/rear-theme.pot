@@ -1,0 +1,755 @@
+# Copyright (C) 2026 Rafael Elias Alves Ribeiro
+# This file is distributed under the same license as the Base Theme v2 theme.
+msgid ""
+msgstr ""
+"Project-Id-Version: Base Theme v2 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/rear-theme\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-12T18:54:30+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: rear-theme\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Base Theme v2"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "Base Theme created by Rafael Elias Alves Ribeiro to develop amazing WordPress websites."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "Rafael Elias Alves Ribeiro"
+msgstr ""
+
+#. Author URI of the theme
+#: style.css
+msgid "https://rafaelias.com.br/"
+msgstr ""
+
+#: app/custom-fields.php:10
+msgid "Custom Button"
+msgstr ""
+
+#: app/menus.php:9
+#: app/options-pages.php:34
+#: app/options-pages.php:35
+msgid "Header"
+msgstr ""
+
+#: app/menus.php:10
+#: app/options-pages.php:41
+#: app/options-pages.php:42
+msgid "Footer"
+msgstr ""
+
+#: app/options-pages.php:11
+#: app/options-pages.php:12
+msgid "Site Settings"
+msgstr ""
+
+#: app/options-pages.php:20
+#: app/options-pages.php:21
+msgid "Default Image"
+msgstr ""
+
+#: app/options-pages.php:27
+#: app/options-pages.php:28
+msgid "Default Pages"
+msgstr ""
+
+#: app/options-pages.php:48
+#: app/options-pages.php:49
+msgid "Social Media"
+msgstr ""
+
+#: app/options-pages.php:55
+#: app/options-pages.php:56
+msgid "Login"
+msgstr ""
+
+#: app/options-pages.php:62
+#: app/options-pages.php:63
+msgid "Scripts"
+msgstr ""
+
+#: app/options-pages.php:69
+#: app/options-pages.php:70
+msgid "Feature Toggles"
+msgstr ""
+
+#: core/blocks.php:334
+msgid "This block has no content yet — fill in its fields to display it."
+msgstr ""
+
+#: core/blocks.php:455
+msgid "Library"
+msgstr ""
+
+#: core/blocks.php:465
+msgid "Custom Blocks"
+msgstr ""
+
+#: core/blocks.php:470
+msgid "Inner Blocks"
+msgstr ""
+
+#: core/blocks.php:475
+msgid "Wrappers"
+msgstr ""
+
+#: core/core.php:378
+#: core/core.php:379
+#: core/core.php:381
+#: core/core.php:434
+#, php-format
+msgid "Add New %s"
+msgstr ""
+
+#: core/core.php:380
+#: core/core.php:432
+#, php-format
+msgid "Edit %s"
+msgstr ""
+
+#: core/core.php:382
+#: core/core.php:383
+#, php-format
+msgid "View %s"
+msgstr ""
+
+#: core/core.php:384
+#: core/core.php:428
+#, php-format
+msgid "Search %s"
+msgstr ""
+
+#: core/core.php:385
+#, php-format
+msgid "No %s found"
+msgstr ""
+
+#: core/core.php:386
+#, php-format
+msgid "No %s found in Trash"
+msgstr ""
+
+#: core/core.php:387
+#: core/core.php:429
+#, php-format
+msgid "All %s"
+msgstr ""
+
+#: core/core.php:430
+#, php-format
+msgid "Parent %s"
+msgstr ""
+
+#: core/core.php:431
+#, php-format
+msgid "Parent %s:"
+msgstr ""
+
+#: core/core.php:433
+#, php-format
+msgid "Update %s"
+msgstr ""
+
+#: core/core.php:435
+#, php-format
+msgid "New %s Name"
+msgstr ""
+
+#: modules/duplicate-post.php:75
+#: modules/duplicate-post.php:156
+msgid "Duplicate"
+msgstr ""
+
+#: modules/duplicate-post.php:85
+msgid "Missing post."
+msgstr ""
+
+#: modules/duplicate-post.php:89
+msgid "Duplicate Post is not enabled."
+msgstr ""
+
+#: modules/duplicate-post.php:92
+msgid "Post not found."
+msgstr ""
+
+#: modules/duplicate-post.php:95
+msgid "Duplicating this post type is not allowed."
+msgstr ""
+
+#: modules/duplicate-post.php:100
+#: modules/duplicate-post.php:107
+#: modules/media-optimizer/inc/class-media-library-ui.php:221
+#: modules/media-optimizer/inc/class-settings-page.php:143
+msgid "Not allowed."
+msgstr ""
+
+#: modules/duplicate-post.php:111
+msgid "Duplication failed."
+msgstr ""
+
+#. translators: %s: link to the new draft
+#: modules/duplicate-post.php:134
+#, php-format
+msgid "Post duplicated — <a href=\"%s\">edit the copy</a>."
+msgstr ""
+
+#. translators: %d: number of duplicated posts
+#: modules/duplicate-post.php:201
+#, php-format
+msgid "%d post duplicated."
+msgid_plural "%d posts duplicated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: original post title
+#: modules/duplicate-post.php:218
+#, php-format
+msgid "%s (Copy)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-admin-bar.php:34
+#: modules/media-optimizer/inc/class-admin-menu.php:26
+#: modules/media-optimizer/inc/class-admin-menu.php:27
+msgid "MediaTrim"
+msgstr ""
+
+#. translators: %d: number of pending images
+#: modules/media-optimizer/inc/class-admin-bar.php:52
+#, php-format
+msgid "Process %d pending image(s) now"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-admin-bar.php:63
+#: modules/media-optimizer/inc/class-admin-menu.php:46
+#: modules/media-optimizer/inc/class-admin-menu.php:47
+#: modules/media-optimizer/inc/class-settings-page.php:133
+msgid "Optimize Images"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-admin-bar.php:70
+#: modules/media-optimizer/inc/class-admin-menu.php:37
+#: modules/media-optimizer/inc/class-admin-menu.php:38
+msgid "Settings"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-admin-bar.php:96
+msgid "Processing…"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-admin-bar.php:97
+msgid "Done!"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-admin-menu.php:55
+#: modules/media-optimizer/inc/class-admin-menu.php:56
+msgid "Regenerate Thumbnails"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-capability.php:76
+msgid "MediaTrim: WebP conversion needs the Imagick or GD PHP extension with WebP support enabled on this server. Ask your host to enable one of these — most managed hosts already have one available; some shared-hosting plans need it turned on explicitly."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:62
+msgid "Optimization"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:72
+msgid "N/A"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:77
+msgid "WebP"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:86
+msgid "Original"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:126
+msgid "Re-optimize"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:136
+msgid "Restore this image to exactly what was originally uploaded? This undoes both re-compression and WebP generation."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:137
+msgid "Restore All"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:145
+msgid "Restore the original file? This replaces the current re-compressed version."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:146
+msgid "Restore Original"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:154
+msgid "Remove the generated WebP files? Visitors will be served the original image again."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:155
+msgid "Remove WebP"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:224
+msgid "Missing attachment."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:245
+msgid "Optimize now (MediaTrim)"
+msgstr ""
+
+#. translators: %d: number of images processed
+#: modules/media-optimizer/inc/class-media-library-ui.php:289
+#, php-format
+msgid "MediaTrim: %d image processed."
+msgid_plural "MediaTrim: %d images processed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:297
+msgid "MediaTrim: image re-optimized."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:298
+msgid "MediaTrim: original restored."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:299
+msgid "MediaTrim: WebP removed, original will be served."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:300
+msgid "MediaTrim: image fully restored to its original upload."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:37
+msgid "Finding images to process…"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:38
+#: modules/media-optimizer/inc/class-optimize-page.php:62
+#, php-format
+msgid "Processing %1$d of %2$d…"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:39
+#: modules/media-optimizer/inc/class-optimize-page.php:63
+#: modules/media-optimizer/inc/class-thumbnails-page.php:40
+#, php-format
+msgid "Done — %d images processed."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:40
+#: modules/media-optimizer/inc/class-optimize-page.php:64
+#: modules/media-optimizer/inc/class-thumbnails-page.php:41
+msgid "Cancelled."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:41
+msgid "Nothing to process — everything is already optimized."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:42
+msgid "Skipped (unsupported file type)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:43
+#: modules/media-optimizer/inc/class-thumbnails-page.php:43
+msgid "Failed"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:44
+msgid "Optimized"
+msgstr ""
+
+#. translators: %s: an already-formatted duration, e.g. "2m 30s"
+#: modules/media-optimizer/inc/class-optimize-page.php:46
+#: modules/media-optimizer/inc/class-optimize-page.php:71
+#: modules/media-optimizer/inc/class-thumbnails-page.php:49
+#, php-format
+msgid "(~%s remaining)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:61
+#: modules/media-optimizer/inc/class-thumbnails-page.php:38
+msgid "Finding images…"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:65
+msgid "Nothing to do — no images have a backup or generated WebP."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:66
+msgid "Restored"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:67
+msgid "WebP removed"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:68
+msgid "Restore every optimized image in the library to exactly what was originally uploaded? This undoes both re-compression and WebP generation everywhere it was applied."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:69
+msgid "Remove the generated WebP files for every image in the library? Visitors will be served the original images again."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:76
+msgid "MediaTrim — Optimize Images"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:77
+msgid "Applies your current settings to images already in the Media Library."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:84
+msgid "Re-process images that are already optimized too"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:88
+#: modules/media-optimizer/inc/class-thumbnails-page.php:74
+msgid "Start"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:89
+#: modules/media-optimizer/inc/class-optimize-page.php:121
+#: modules/media-optimizer/inc/class-thumbnails-page.php:75
+msgid "Cancel"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:103
+#: modules/media-optimizer/inc/class-optimize-page.php:135
+#: modules/media-optimizer/inc/class-thumbnails-page.php:89
+msgid "Image"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:104
+#: modules/media-optimizer/inc/class-thumbnails-page.php:90
+msgid "Status"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:105
+msgid "Before"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:106
+msgid "After"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:107
+msgid "Saved"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:114
+msgid "Restore / Undo"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:115
+msgid "Undo optimization across the entire library at once. Images with nothing to restore are simply skipped, so this is safe to run at any time."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:119
+msgid "Restore All Images"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:120
+msgid "Remove All WebP"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-optimize-page.php:136
+msgid "Result"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:42
+msgid "MediaTrim — Settings"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:45
+msgid "Settings saved."
+msgstr ""
+
+#. translators: %s: capability backend name, e.g. IMAGICK
+#: modules/media-optimizer/inc/class-settings-page.php:54
+#, php-format
+msgid "Using %s for image processing."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:68
+msgid "Optimize on upload"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:72
+msgid "Automatically process new uploads in the background"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:74
+msgid "Uncheck if you are experiencing issues while uploading images (e.g. very large files timing out on a limited host) — images already in the library are unaffected, and can still be processed manually from Optimize Images."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:78
+msgid "Generate WebP"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:82
+msgid "Add a WebP sibling alongside the original"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:84
+msgid "Never touches the original file — zero risk, purely additive."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:88
+msgid "Re-compress originals"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:92
+msgid "Shrink the original file itself, not just add WebP"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:94
+msgid "A backup is always kept before recompressing — restore it any time from the Media Library."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:98
+msgid "Quality"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:101
+msgid "Low (smallest files)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:102
+msgid "Balanced (recommended)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:103
+msgid "High (largest files, best quality)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:104
+msgid "Custom"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:110
+msgid "WebP quality (1-100)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:116
+msgid "Re-compression quality (1-100)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-settings-page.php:125
+msgid "Save Settings"
+msgstr ""
+
+#. translators: %s: link to the Optimize Images page
+#: modules/media-optimizer/inc/class-settings-page.php:132
+#, php-format
+msgid "Want to process images already in your library? Head to %s."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-stats.php:73
+msgid "Images optimized"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-stats.php:77
+msgid "Total space saved"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:39
+#, php-format
+msgid "Regenerating %1$d of %2$d…"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:42
+msgid "No images found."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:44
+#: modules/media-optimizer/inc/class-thumbnails-page.php:46
+msgid "Regenerated"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:45
+msgid "Skipped (already correct)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:47
+msgid "Deleted"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:54
+msgid "MediaTrim — Regenerate Thumbnails"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:56
+msgid "Recreates registered image sizes (thumbnail, medium, large, and any custom sizes) from each image's original file. Use this after changing image size settings, or if generated sizes look wrong or outdated. The original file itself is never touched."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:62
+msgid "Skip images that already have correctly-sized thumbnails (faster)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:67
+msgid "Delete old thumbnail files that no longer match a registered size, to free up server space"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:70
+msgid "This may break anything still directly linking to an old size's file URL. Leave unchecked unless you specifically want to reclaim disk space."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:91
+msgid "Details"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:98
+msgid "Registered Thumbnail Sizes"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:99
+msgid "These are the sizes currently registered on this site — this is what regeneration produces."
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:110
+msgid "No custom sizes are registered."
+msgstr ""
+
+#. translators: 1: width, 2: height, 3: crop/proportional behavior description
+#: modules/media-optimizer/inc/class-thumbnails-page.php:121
+#, php-format
+msgid "%1$d×%2$d pixels (%3$s)"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:125
+msgid "cropped to fit"
+msgstr ""
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:126
+msgid "proportionally resized to fit inside dimensions"
+msgstr ""
+
+#: modules/svg-support.php:72
+msgid "This SVG file could not be safely sanitized and was rejected."
+msgstr ""
+
+#: src/content/blocks/library/carousel/carousel-15/carousel-15.php:32
+msgid "Todos"
+msgstr ""
+
+#: src/content/blocks/library/tabs/tabs-1/tabs-1.php:22
+#: src/content/blocks/library/tabs/tabs-2/tabs-2.php:22
+#: src/content/blocks/library/tabs/tabs-3/tabs-3.php:24
+#: src/content/blocks/library/tabs/tabs-4/tabs-4.php:24
+#: src/content/blocks/library/tabs/tabs-5/tabs-5.php:22
+#: src/content/blocks/library/tabs/tabs-6/tabs-6.php:22
+#: src/content/blocks/library/tabs/tabs-7/tabs-7.php:18
+#: src/content/components/style-guide/tabs/tabs.php:6
+msgid "Tabs"
+msgstr ""
+
+#: src/content/blocks/library/tabs/tabs-4/parts/panel.php:15
+#, php-format
+msgid "ETAPA %1$d DE %2$d"
+msgstr ""
+
+#: src/content/blocks/library/timeline/timeline-4/timeline-4.php:9
+msgid "Concluído"
+msgstr ""
+
+#: src/content/blocks/library/timeline/timeline-4/timeline-4.php:10
+msgid "Em andamento"
+msgstr ""
+
+#: src/content/blocks/library/timeline/timeline-4/timeline-4.php:11
+msgid "Planejado"
+msgstr ""
+
+#: src/content/components/custom/card-material/card-material.php:41
+msgid "Confira"
+msgstr ""
+
+#: src/content/components/custom/card-post/card-post.php:41
+msgid "Ler mais →"
+msgstr ""
+
+#: src/content/components/custom/header/header.php:127
+#: src/content/components/library/header-1/header-1.php:124
+#: src/content/components/library/header-click-1/header-click-1.php:124
+msgid "Open menu"
+msgstr ""
+
+#: src/content/components/custom/header/header.php:129
+#: src/content/components/library/header-1/header-1.php:126
+#: src/content/components/library/header-click-1/header-click-1.php:126
+msgid "Main menu Button. Press Enter or Space to toggle menu and navigate using Arrow Keys. Escape key closes the menu and Tab jumps to next item."
+msgstr ""
+
+#: src/content/components/custom/mega-menu/mega-menu.php:51
+#: src/content/components/library/mega-menu-1/mega-menu-1.php:51
+msgid "Back"
+msgstr ""
+
+#: src/content/components/style-guide/form/form.php:8
+msgid "Send"
+msgstr ""
+
+#: src/content/components/style-guide/modal/modal.php:45
+#: src/content/components/style-guide/modal/modal.php:46
+msgid "Close Modal"
+msgstr ""
+
+#: src/content/components/style-guide/modal/modal.php:47
+msgid "Close"
+msgstr ""
+
+#: src/content/components/style-guide/pagination/pagination.php:31
+msgid "Pagination"
+msgstr ""
+
+#: src/content/components/style-guide/swiper-controls/swiper-controls.php:30
+msgid "Return to previous slide"
+msgstr ""
+
+#: src/content/components/style-guide/swiper-controls/swiper-controls.php:42
+msgid "Navigate to next slide"
+msgstr ""
+
+#: src/content/components/style-guide/tabs/tabs.php:57
+msgid "Select Tab"
+msgstr ""
+
+#: src/content/components/style-guide/video-player/video-player.php:127
+msgid "Play video"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Block Listing"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Ember Animations - Image"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Ember Animations - Text"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Globals"
+msgstr ""

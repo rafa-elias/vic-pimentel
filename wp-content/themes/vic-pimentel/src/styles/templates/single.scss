@@ -1,0 +1,151 @@
+@use 'util' as *;
+
+// Project detail — enqueued on is_singular('post') (core/assets.php).
+body.single-post .is-root-container {
+    .project-hero {
+        position: relative;
+        padding: calc(#{$header-height} + #{$space-l}) 0 $space-l;
+
+        @include media('>=desktop-small') {
+            padding-top: calc(#{$header-height} + #{$space-xl});
+        }
+    }
+
+    .project-hero-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $space-m;
+    }
+
+    .project-hero-head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $space-m;
+        text-align: center;
+    }
+
+    .project-meta {
+        display: flex;
+        align-items: center;
+        gap: $space-xs;
+        margin: 0;
+    }
+
+    .project-category {
+        @include typography($p-xs-bold);
+    }
+
+    .project-meta-divider {
+        width: rem(2);
+        height: rem(18);
+        background: $text-1;
+    }
+
+    .project-date {
+        @include typography($p-xs);
+
+        color: $text-3;
+    }
+
+    .project-title {
+        @include typography($heading-l);
+
+        display: flex;
+        align-items: center;
+        gap: $space-s;
+        margin: 0;
+    }
+
+    .project-favicon {
+        position: relative;
+        flex: 0 0 auto;
+        width: fluid((40 40 40 36 32 28));
+        aspect-ratio: 1;
+        overflow: hidden;
+        border-radius: $radius-m;
+        background: $surface-hover;
+
+        .picture,
+        .img {
+            @include fit;
+        }
+    }
+
+    .project-thumbnail {
+        @include glass($radius-l);
+
+        width: 100%;
+        padding: $space-l;
+    }
+
+    .project-thumbnail-media {
+        max-width: rem(800);
+        margin: 0 auto;
+        aspect-ratio: 16 / 9;
+        border-radius: $radius-m;
+        box-shadow: 0 rem(4) rem(20) tint($black, 40);
+
+        .media-image .img {
+            border-radius: inherit;
+        }
+    }
+
+    .post-body {
+        position: relative;
+        z-index: 1;
+        // Spacing between project blocks comes from each block's own spacing_bottom
+        // (config default), so the editor canvas and the front end match.
+        padding-top: $space-l;
+    }
+
+    .project-section {
+        padding: $space-xl 0;
+    }
+
+    .project-section .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $space-l;
+    }
+
+    .project-section-head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-m;
+    }
+
+    .project-section-heading {
+        @include typography($heading-m);
+
+        margin: 0;
+    }
+
+    .project-highlights-grid,
+    .project-related-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: $space-l $space-m;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include media('>=mobile-large') {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    .project-highlights-grid {
+        @include media('>=desktop-small') {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    .project-related-grid {
+        @include media('>=desktop-small') {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+    }
+}

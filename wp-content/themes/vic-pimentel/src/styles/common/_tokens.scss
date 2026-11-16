@@ -1,0 +1,18 @@
+@use 'util' as *;
+
+// Fluid design tokens, printed once. SCSS variables in abstract/_variables.scss point here.
+:root {
+    @each $name, $values in $font-size-tokens {
+        --fs-#{$name}: #{fluid($values)};
+    }
+
+    @each $name, $values in $space-tokens {
+        --space-#{$name}: #{fluid($values)};
+    }
+
+    @each $name, $values in $radius-tokens {
+        --radius-#{$name}: #{fluid($values)};
+    }
+
+    color-scheme: dark;
+}

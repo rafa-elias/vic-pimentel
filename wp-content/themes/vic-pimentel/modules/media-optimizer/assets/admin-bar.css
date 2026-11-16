@@ -1,0 +1,25 @@
+#wpadminbar .media-optimizer-ab-badge {
+    display: inline-block;
+    margin-left: 4px;
+    padding: 0 6px;
+    border-radius: 9px;
+    background: #d63638;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
+    height: 18px;
+}
+
+#wpadminbar .media-optimizer-ab-node.has-pending .ab-icon {
+    animation: media-optimizer-pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes media-optimizer-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+
+#wpadminbar .media-optimizer-process-now.is-processing > .ab-item {
+    pointer-events: none;
+    opacity: 0.7;
+}

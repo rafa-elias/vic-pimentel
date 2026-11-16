@@ -1,0 +1,63 @@
+@use 'util' as *;
+
+@include component('media') {
+    position: relative;
+    overflow: hidden;
+    background: $mid-gray;
+
+    .media-image,
+    .media-image .picture,
+    .media-image .img,
+    .media-video {
+        @include fit;
+    }
+
+    .media-video {
+        opacity: 0;
+        transition: opacity $slow $ease;
+    }
+
+    &.is-playing .media-video {
+        opacity: 1;
+    }
+
+    .media-toggle {
+        @include icon-button(24);
+
+        position: absolute;
+        top: $space-xs;
+        right: $space-xs;
+        z-index: 3;
+
+        .icon-play,
+        .icon-pause {
+            display: inline-grid;
+            place-items: center;
+        }
+
+        .icon-play svg {
+            width: rem(7);
+            height: rem(9);
+            margin-left: rem(1);
+        }
+
+        .icon-pause svg {
+            width: rem(6);
+            height: rem(9);
+        }
+
+        .icon-pause {
+            display: none;
+        }
+    }
+
+    &.is-playing .media-toggle {
+        .icon-play {
+            display: none;
+        }
+
+        .icon-pause {
+            display: inline-grid;
+        }
+    }
+}

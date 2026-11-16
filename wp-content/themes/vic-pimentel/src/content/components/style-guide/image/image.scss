@@ -1,0 +1,19 @@
+@use 'util' as *;
+
+@include component('image') {
+    position: relative;
+    margin: 0;
+
+    .img {
+        content: unset !important;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    &.has-overlay::after {
+        @include fit;
+
+        background: $overlay;
+    }
+}

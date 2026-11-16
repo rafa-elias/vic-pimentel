@@ -1,0 +1,122 @@
+{
+    "key": "group_335f657818c88",
+    "title": "Block: Post-Media-Pair",
+    "fields": [
+        {
+            "name": "show_captions",
+            "label": "Show captions",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "key": "field_4458e41c5ad2a"
+        },
+        {
+            "name": "items",
+            "label": "Media (2)",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 2,
+            "max": 2,
+            "button_label": "Add media",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "name": "image",
+                    "label": "Image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "mime_types": "",
+                    "key": "field_60c938fb72df9",
+                    "parent_repeater": "field_d714abfd6247c"
+                },
+                {
+                    "name": "video",
+                    "label": "Video (optional)",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "mime_types": "mp4,webm",
+                    "key": "field_3b5b709d34315",
+                    "parent_repeater": "field_d714abfd6247c"
+                },
+                {
+                    "name": "caption",
+                    "label": "Caption",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_307b91dd66416",
+                    "parent_repeater": "field_d714abfd6247c"
+                }
+            ],
+            "key": "field_d714abfd6247c",
+            "collapsed": "field_60c938fb72df9"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/post-media-pair"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

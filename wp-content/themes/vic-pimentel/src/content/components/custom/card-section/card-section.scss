@@ -1,0 +1,68 @@
+@use 'util' as *;
+
+@include component('card-section') {
+    display: flex;
+    flex-direction: column;
+    gap: $space-s;
+    width: 100%;
+    text-align: left;
+    color: $text-1;
+
+    .card-media-box {
+        @include glass($radius-l);
+
+        position: relative;
+        display: block;
+        padding: $space-l;
+        transition: background $fast $ease, border-color $fast $ease;
+    }
+
+    .card-thumb {
+        display: block;
+        aspect-ratio: 465 / 290;
+        border-radius: $radius-m;
+        box-shadow: 0 rem(4) rem(20) tint($black, 40);
+
+        .media-image,
+        .media-image .img {
+            border-radius: inherit;
+        }
+    }
+
+    .card-expand {
+        @include icon-button(24);
+
+        position: absolute;
+        top: $space-xs;
+        right: $space-xs;
+        opacity: 0;
+        transition: opacity $fast $ease;
+
+        svg {
+            width: rem(10);
+            height: rem(10);
+        }
+    }
+
+    .card-title {
+        @include typography($special-2);
+    }
+
+    &:hover,
+    &:focus-visible {
+        .card-media-box {
+            background: $surface-hover;
+            border-color: $border-hover;
+        }
+
+        .card-expand {
+            opacity: 1;
+        }
+    }
+
+    @media (hover: none) {
+        .card-expand {
+            opacity: 1;
+        }
+    }
+}

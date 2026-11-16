@@ -1,0 +1,101 @@
+{
+    "key": "group_63deb4041144a",
+    "title": "Block: Post-Project-Info",
+    "fields": [
+        {
+            "name": "title",
+            "label": "Title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Project Info",
+            "placeholder": "",
+            "maxlength": "",
+            "key": "field_4079b865980f1"
+        },
+        {
+            "name": "rows",
+            "label": "Rows",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "button_label": "Add row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "name": "label",
+                    "label": "Label",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_96cae61b5c8f4",
+                    "parent_repeater": "field_06bec7cb5b983"
+                },
+                {
+                    "name": "value",
+                    "label": "Value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_484cf30cdc9bb",
+                    "parent_repeater": "field_06bec7cb5b983"
+                }
+            ],
+            "key": "field_06bec7cb5b983",
+            "collapsed": "field_96cae61b5c8f4"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf/post-project-info"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

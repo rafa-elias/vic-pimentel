@@ -1,0 +1,33 @@
+@use 'util' as *;
+
+html {
+    background: $background-1;
+}
+
+// Front-end body + admin editor "body"
+body:not(.wp-admin), .editor-styles-wrapper {
+    @include typography($p-l);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $text-1;
+    background: $background-1;
+
+    .sr-only {
+        @include sr-only;
+    }
+
+    ::selection {
+        color: $black;
+        background: $white;
+    }
+
+    :focus-visible {
+        outline: 1px solid $text-2;
+        outline-offset: rem(2);
+    }
+}
+
+body:not(.wp-admin) {
+    scrollbar-color: $surface-strong transparent;
+}

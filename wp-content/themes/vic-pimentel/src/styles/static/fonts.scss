@@ -1,0 +1,110 @@
+// This is where we declare all font families being used in the theme. Fonts are
+// self-hosted (not pulled from Google Fonts at runtime) — files live in
+// src/assets/fonts/, only the latin + latin-ext subsets are included (this is an English
+// site; no cyrillic/greek/vietnamese glyphs are ever needed, so those subsets Google
+// normally serves are deliberately dropped rather than shipped for nothing).
+//
+// It needs to be static because it is included both in the front-end and in the back-end.
+// For this reason, do not add any CSS rules here, only @font-face declarations.
+//
+// To add or change a font family: see skills/figma-sync/figma-to-scss.md §8 for the
+// fetch-and-regenerate workflow (fetches Google's real CSS2 response, downloads the
+// woff2 files, keeps only latin/latin-ext, writes the @font-face blocks below).
+//
+// The three "* Fallback" @font-face blocks below are metric-matched fallbacks
+// (size-adjust/ascent-override/descent-override/line-gap-override), computed
+// per real-font-vs-local-system-font pair so the fallback occupies the exact
+// same box as the real font — when the real font finishes loading and swaps
+// in, nothing reflows (no CLS). These values are specific to each font pair;
+// changing which font a role uses means regenerating its fallback block, not
+// a one-time site-wide constant. See figma-to-scss.md §8 for the regeneration
+// script (uses the `fontaine` npm package's readMetrics/getMetricsForFamily/
+// generateFontFace against the real .woff2 file and a representative local
+// fallback font).
+//
+// `src` chains several `local()` candidates, not just one — a single named
+// font (e.g. just "Arial") only exists on some OSes (confirmed missing on
+// stock Linux and Android in local testing), so a single-candidate fallback
+// silently fails to match there and the override never applies — @font-face
+// itself doesn't resolve, so it's skipped entirely rather than degrading
+// gracefully. The candidate lists are fontaine's own DEFAULT_CATEGORY_FALLBACKS
+// (sans-serif / monospace) plus "Liberation Sans" (the Arial-metric-compatible
+// font actually shipped on most Linux distros, verified present here). One
+// representative font's metrics (Arial, Courier New) are used for the override
+// numbers since this whole family of system UI faces is metric-similar enough
+// that reusing one set of values across the group is the standard approach
+// (same one fontaine and Next.js's font optimizer use), not a per-OS-exact match.
+
+// Inter
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../../src/assets/fonts/inter-100-900-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../../src/assets/fonts/inter-100-900-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Inter Fallback';
+    src: local('BlinkMacSystemFont'), local('Segoe UI'), local('Helvetica Neue'), local('Arial'), local('Liberation Sans'), local('Noto Sans');
+    size-adjust: 107.1194%;
+    ascent-override: 90.4365%;
+    descent-override: 22.518%;
+    line-gap-override: 0%;
+}
+
+// Instrument Serif (regular + italic)
+@font-face {
+    font-family: 'Instrument Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../../src/assets/fonts/instrument-serif-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../../src/assets/fonts/instrument-serif-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../../src/assets/fonts/instrument-serif-italic-latin-ext.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Instrument Serif';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../../src/assets/fonts/instrument-serif-italic-latin.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Instrument Serif Fallback';
+    src: local('Times New Roman'), local('Liberation Serif'), local('Tinos'), local('Noto Serif'), local('Georgia');
+    size-adjust: 83.9385%;
+    ascent-override: 117.9435%;
+    descent-override: 36.9318%;
+    line-gap-override: 0%;
+}

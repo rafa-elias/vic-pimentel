@@ -1,0 +1,105 @@
+@use 'util' as *;
+
+@include block('text-section') {
+    .column-content {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xl;
+    }
+
+    .text-divider {
+        display: block;
+        height: rem(2);
+        background: $divider;
+    }
+
+    .text-body {
+        display: flex;
+        flex-direction: column;
+        gap: $space-l;
+    }
+
+    .text-heading {
+        @include typography($heading-s);
+
+        margin: 0;
+    }
+
+    .text-copy {
+        @include typography($p-l);
+
+        color: $text-3;
+    }
+
+    .text-chips,
+    .text-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $space-xs;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    // Figma: info-card
+    .text-list {
+        @include glass($radius-l);
+
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: $space-m rem(4);
+        list-style: none;
+
+        li + li {
+            margin-top: $space-s;
+            padding-top: $space-s;
+            border-top: 1px solid $border;
+        }
+    }
+
+    .text-list-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: $space-xs $space-m;
+        align-items: center;
+        padding: 0 $space-m;
+        color: inherit;
+
+        @include media('>=mobile-large') {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    a.text-list-row:hover .text-list-title,
+    a.text-list-row:focus-visible .text-list-title {
+        text-decoration: underline;
+        text-underline-offset: 0.2em;
+    }
+
+    .text-list-title {
+        @include typography($p-s-bold);
+
+        display: flex;
+        align-items: center;
+        gap: $space-s;
+    }
+
+    .text-list-icon {
+        display: inline-grid;
+        place-items: center;
+        flex: 0 0 rem(24);
+        height: rem(24);
+
+        svg {
+            width: rem(24);
+            height: rem(24);
+        }
+    }
+
+    .text-list-text {
+        @include typography($p-s);
+
+        color: $text-3;
+    }
+}

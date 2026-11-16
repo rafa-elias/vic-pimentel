@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "post-media-pair.php"
+    },
+    "name": "acf/post-media-pair",
+    "title": "Project Media Pair",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "images-alt2",
+    "keywords": [
+        "post-media-pair"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/post-media-pair/preview.png"
+        }
+    },
+    "style": "post-media-pair-style",
+    "editorStyle": "post-media-pair-style"
+}

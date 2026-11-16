@@ -1,0 +1,345 @@
+{
+    "key": "group_105c1cd272e20",
+    "title": "Theme Settings: Animations",
+    "fields": [
+        {
+            "name": "",
+            "label": "Unicorn Studio",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Per scene: upload the JSON exported from Unicorn Studio, or paste a published embed ID. Until either is set, a static gradient stand-in is shown. Mouse tracking is part of each scene; the login scene always has mouse input disabled.",
+            "new_lines": "wpautop",
+            "esc_html": 0,
+            "key": "field_288fde3fb9d0e"
+        },
+        {
+            "name": "animations",
+            "label": "Scenes",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "name": "",
+                    "label": "Home hero (mouse tracking)",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "new_lines": "wpautop",
+                    "esc_html": 0,
+                    "key": "field_952247f27908d"
+                },
+                {
+                    "name": "hero_scene",
+                    "label": "Exported JSON",
+                    "type": "file",
+                    "instructions": "Self-hosted export. Wins over the embed ID.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "34",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "mime_types": "json",
+                    "key": "field_c7beca9667817"
+                },
+                {
+                    "name": "hero_embed",
+                    "label": "or published embed ID",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_942b8f1d46354"
+                },
+                {
+                    "name": "hero_vars",
+                    "label": "Variables (JSON, optional)",
+                    "type": "textarea",
+                    "instructions": "Initial values for the scene's authored variables, e.g. {\"Noise Fill Color A\":\"#0b0b0b\"}.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2,
+                    "new_lines": "",
+                    "default_value": "",
+                    "key": "field_fbaa1d6f4a436"
+                },
+                {
+                    "name": "",
+                    "label": "Footer (mouse tracking)",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "new_lines": "wpautop",
+                    "esc_html": 0,
+                    "key": "field_8c21ddd4132be"
+                },
+                {
+                    "name": "footer_scene",
+                    "label": "Exported JSON",
+                    "type": "file",
+                    "instructions": "Self-hosted export. Wins over the embed ID.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "34",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "mime_types": "json",
+                    "key": "field_af093edff6cb6"
+                },
+                {
+                    "name": "footer_embed",
+                    "label": "or published embed ID",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_c6534c1688210"
+                },
+                {
+                    "name": "footer_vars",
+                    "label": "Variables (JSON, optional)",
+                    "type": "textarea",
+                    "instructions": "Initial values for the scene's authored variables, e.g. {\"Noise Fill Color A\":\"#0b0b0b\"}.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2,
+                    "new_lines": "",
+                    "default_value": "",
+                    "key": "field_1266f039964f8"
+                },
+                {
+                    "name": "",
+                    "label": "Login screen (mouse disabled)",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "new_lines": "wpautop",
+                    "esc_html": 0,
+                    "key": "field_2e2d7b7df5023"
+                },
+                {
+                    "name": "login_scene",
+                    "label": "Exported JSON",
+                    "type": "file",
+                    "instructions": "Self-hosted export. Wins over the embed ID.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "34",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "mime_types": "json",
+                    "key": "field_aee3743ef35ce"
+                },
+                {
+                    "name": "login_embed",
+                    "label": "or published embed ID",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_be053cb50a733"
+                },
+                {
+                    "name": "login_vars",
+                    "label": "Variables (JSON, optional)",
+                    "type": "textarea",
+                    "instructions": "Initial values for the scene's authored variables, e.g. {\"Noise Fill Color A\":\"#0b0b0b\"}.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2,
+                    "new_lines": "",
+                    "default_value": "",
+                    "key": "field_7e33a7ce5ec73"
+                },
+                {
+                    "name": "",
+                    "label": "Top light — project & about (loop)",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "new_lines": "wpautop",
+                    "esc_html": 0,
+                    "key": "field_7911c4b90c371"
+                },
+                {
+                    "name": "light_scene",
+                    "label": "Exported JSON",
+                    "type": "file",
+                    "instructions": "Self-hosted export. Wins over the embed ID.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "34",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "mime_types": "json",
+                    "key": "field_5ab34780e834e"
+                },
+                {
+                    "name": "light_embed",
+                    "label": "or published embed ID",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "key": "field_61d17506a67f1"
+                },
+                {
+                    "name": "light_vars",
+                    "label": "Variables (JSON, optional)",
+                    "type": "textarea",
+                    "instructions": "Initial values for the scene's authored variables, e.g. {\"Noise Fill Color A\":\"#0b0b0b\"}.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "rows": 2,
+                    "new_lines": "",
+                    "default_value": "",
+                    "key": "field_d72098c833b40"
+                },
+                {
+                    "name": "sdk_url",
+                    "label": "Unicorn Studio runtime URL",
+                    "type": "url",
+                    "instructions": "Optional override of the pinned runtime (VP_UNICORN_SDK in app/config.php).",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "key": "field_8ea1a56b8b649"
+                }
+            ],
+            "key": "field_3b207335c9662"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "animations_template"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1794492700
+}

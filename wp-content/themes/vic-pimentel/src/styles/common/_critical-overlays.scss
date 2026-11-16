@@ -1,0 +1,65 @@
+@use 'util' as *;
+
+// modal.scss is lazy-loaded (its <link> only prints in
+// wp_footer), but the component hide themselves by default via their own
+// CSS. Duplicate just the closed state here, in the eagerly-loaded global
+// stylesheet, so the browser never paints them open before the component
+// CSS arrives. Keep in sync with the default (non-.is-active/.active) state
+// in modal/modal.scss.
+
+[data-component="modal"] {
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+}
+
+// Ember (src/scripts/static/ember.config.js) hides entrance elements via
+// GSAP's "initial" state, but that only runs once its footer-loaded bundle
+// parses and ember.init() fires on DOMContentLoaded. Until then the element
+// renders at its natural, fully visible state, so on every page load it
+// flashes visible, then snaps invisible when Ember applies the initial GSAP
+// state, then fades back in — most noticeable on above-the-fold blocks like
+// a hero. Pre-hide it here so first paint already matches Ember's initial
+// state and only the fade-in is visible. Every registered entrance animation
+// uses opacity: 0 as part of its initial state (even ones that also hide via
+// filter/scale/rotation/skew/clip-path), so this alone is enough to prevent
+// the flash for every animation type.
+//
+// ember-js's own _buildEntranceGroup() skips (never runs gsap.set() at all)
+// a group whose top is already above the viewport when init() runs — e.g.
+// scroll position restored mid-page on refresh/back-forward. Since we
+// pre-hide unconditionally here, ember.config.js runs the same check itself
+// right before calling ember.init() and, for any group it detects Ember is
+// about to skip, manually replays both animation phases (initial then
+// completed) so every hidden property — not just opacity — resolves to its
+// real finished state, not just a bare opacity fix. Keep the two checks in
+// sync.
+// Positive frontend marker (core/core.php): the editor iframe's body has neither class.
+body.is-frontend .ember-entrance-group {
+    .ember-entrance,
+    [class*=" ember-entrance--"] {
+        opacity: 0;
+    }
+}
+
+// The first block on the page is almost always the LCP element, and Chrome doesn't
+// count an opacity:0 element as "painted" for LCP purposes — so on mobile (where
+// perceived load speed matters most and Core Web Vitals are measured against mobile
+// first), skip the pre-hide for it entirely rather than waiting out Ember's full
+// choreography (footer-script load + ~300ms observer delay + per-element delay + tween
+// duration) before it's allowed to appear. `.block` is only ever present on a rendered
+// block's own <section> wrapper (see render() in core/blocks.php) and every block
+// renders as that same tag, so :first-of-type reliably means "first block on this
+// page" with no server-side flag needed. Desktop keeps the normal animation — see the
+// matching JS-side class strip in ember.config.js, which is what actually prevents
+// Ember from re-hiding this via transform/filter/clip-path a moment later; this rule
+// alone only covers the opacity pre-hide.
+@include media('<mobile-large') {
+    .block:first-of-type .ember-entrance-group {
+        .ember-entrance,
+        [class*=" ember-entrance--"] {
+            opacity: 1 !important;
+        }
+    }
+}

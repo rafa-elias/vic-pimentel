@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "about-hero.php"
+    },
+    "name": "acf/about-hero",
+    "title": "About Hero",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "id-alt",
+    "keywords": [
+        "about-hero"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/about-hero/preview.png"
+        }
+    },
+    "style": "about-hero-style",
+    "editorStyle": "about-hero-style"
+}

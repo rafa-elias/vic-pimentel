@@ -1,0 +1,10 @@
+@use 'util' as *;
+
+@include block('post-intro') {
+    .post-intro-text {
+        @include typography($p-2xl-bold);
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

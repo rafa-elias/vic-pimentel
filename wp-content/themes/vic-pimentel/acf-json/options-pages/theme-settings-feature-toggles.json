@@ -1,0 +1,155 @@
+{
+    "key": "group_6c0c2984c73fd",
+    "title": "Theme Settings: Feature Toggles",
+    "fields": [
+        {
+            "key": "field_8b297889942c7",
+            "label": "Enable ACF Admin",
+            "name": "feature_show_acf_admin",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Shows the ACF admin UI (Field Groups screen). Also requires SHOW_ACF_ADMIN to be true in app/config.php. Always stays visible to the user ID(s) in FEATURE_TOGGLES_USER_ID regardless of this field, so they can never lock themselves out of turning it back on.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_07c6159141547",
+            "label": "Enable Library Blocks",
+            "name": "feature_library_blocks",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Registers src/content/blocks/library/ blocks as usable blocks. Also requires LOAD_LIBRARY_BLOCKS to be true in app/config.php.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_4814b7d56ffe2",
+            "label": "Enable Media Optimizer",
+            "name": "feature_media_optimizer",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Activates the MediaTrim module (WebP generation, on-upload optimization). Also requires MEDIA_OPTIMIZER_ENABLED to be true in app/config.php.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_da411d3d0af85",
+            "label": "Enable SVG Upload",
+            "name": "feature_svg_upload",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Allows SVG files to be uploaded to the Media Library. Also requires ALLOW_SVG_UPLOAD to be true in app/config.php.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_74001ccef0373",
+            "label": "Enable Duplicate Post",
+            "name": "feature_duplicate_post",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "Adds a \"Duplicate\" row action to the post types selected below. Also requires ALLOW_DUPLICATE_POST to be true in app/config.php.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_d224a05cfafe5",
+            "label": "Post Types Allowed to Duplicate",
+            "name": "duplicate_post_types",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "Choices are populated automatically from every registered public post type.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_74001ccef0373",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": [],
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "feature_toggles_template"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1752278400
+}

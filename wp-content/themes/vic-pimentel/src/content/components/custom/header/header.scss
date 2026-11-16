@@ -1,0 +1,153 @@
+@use 'util' as *;
+
+$nav-height: rem(42);
+
+@include component('header') {
+    position: relative;
+    z-index: 50;
+
+    // Logo + info: scroll away with the page (absolute over the first section).
+    .header-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: $space-m;
+        height: $header-height;
+        padding: 0 $horizontal-padding;
+
+        @include media('<tablet') {
+            justify-content: center;
+        }
+        color: $text-1;
+        pointer-events: none;
+
+        > * {
+            pointer-events: auto;
+        }
+    }
+
+    .header-logo {
+        display: inline-flex;
+        flex-shrink: 0;
+        color: $text-1;
+
+        svg,
+        img {
+            display: block;
+            width: auto;
+            height: fluid((36 30 30 24 16 16));
+        }
+    }
+
+    .header-info {
+        display: none;
+        align-items: center;
+        gap: $space-m;
+        text-align: right;
+
+        @include media('>=tablet') {
+            display: flex;
+        }
+    }
+
+    .header-location {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .header-location {
+        .title {
+            @include typography($special-2);
+        }
+
+        .subtitle {
+            @include typography($special-1);
+
+            font-style: italic;
+        }
+    }
+
+    // Sticky nav pill.
+    .header-nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        padding: $space-s $horizontal-padding;
+        background: linear-gradient(to bottom, transparent, tint($black, 90));
+        transition: transform $slow $ease-out, opacity $slow $ease-out;
+        pointer-events: none;
+
+        @include media('>=desktop-small') {
+            top: calc((#{$header-height} - #{$nav-height}) / 2);
+            bottom: auto;
+            padding: 0;
+            background: none;
+        }
+
+        &.is-hidden {
+            transform: translateY(110%);
+
+            @include media('>=desktop-small') {
+                transform: translateY(calc(-100% - #{$header-height}));
+            }
+        }
+    }
+
+    .nav-pill {
+        display: flex;
+        align-items: center;
+        height: $nav-height;
+        margin: 0;
+        padding: rem(4);
+        list-style: none;
+        background: $mid-gray;
+        border: 1px solid $border;
+        border-radius: $radius-full;
+        pointer-events: auto;
+    }
+
+    .nav-link {
+        @include typography($action-m);
+
+        display: inline-flex;
+        align-items: center;
+        height: rem(32);
+        padding: 0 $space-s;
+        color: $text-5;
+        border-radius: $radius-full;
+        transition: color $fast $ease, background $fast $ease;
+
+        &:hover,
+        &:focus-visible {
+            color: $text-3;
+        }
+    }
+
+    .is-current .nav-link {
+        color: $text-1;
+        background: $surface;
+        box-shadow: 0 rem(2) rem(10) tint($black, 25);
+    }
+}
+
+// Home: the header sits inside the inset hero panel from 1280px.
+body.home .is-root-container .component-header .header-top {
+    @include media('>=desktop-small') {
+        top: rem(16);
+        padding: 0 calc(#{rem(16)} + #{$horizontal-padding});
+    }
+}
+
+body.home .is-root-container .component-header .header-nav {
+    @include media('>=desktop-small') {
+        top: calc(#{rem(16)} + (#{$header-height} - #{$nav-height}) / 2);
+    }
+}

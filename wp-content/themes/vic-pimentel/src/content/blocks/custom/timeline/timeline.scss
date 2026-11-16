@@ -1,0 +1,64 @@
+@use 'util' as *;
+
+@include block('timeline') {
+    .timeline-rows {
+        display: flex;
+        flex-direction: column;
+        gap: $space-l;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .timeline-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            'label years'
+            'body body';
+        gap: $space-m $space-l;
+        padding-top: $space-l;
+        border-top: rem(2) solid $divider;
+
+        @include media('>=desktop-medium') {
+            grid-template-columns: minmax(0, 1fr) minmax(0, $wrapper-content) minmax(0, 1fr);
+            grid-template-areas: 'label body years';
+            gap: $space-l;
+        }
+    }
+
+    .timeline-label {
+        @include typography($heading-s);
+
+        grid-area: label;
+        margin: 0;
+    }
+
+    .timeline-years {
+        @include typography($heading-xs);
+
+        grid-area: years;
+        margin: 0;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .timeline-body {
+        grid-area: body;
+        display: flex;
+        flex-direction: column;
+        gap: $space-m;
+    }
+
+    .timeline-title {
+        @include typography($p-2xl-bold);
+
+        margin: 0;
+    }
+
+    .timeline-text {
+        @include typography($p-l);
+
+        color: $text-3;
+    }
+}

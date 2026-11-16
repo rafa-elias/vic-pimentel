@@ -1,0 +1,57 @@
+// This file includes mixins for creating selector contexts in Sass.
+// Selector contexts are very important when styling entities such as blocks and components.
+// They allow us to include resets in the admin interface, but still be able to override them in a conventional way.
+
+// Wrap variable in a CSS selector.
+@mixin _selector-wrap($selector: null) {
+    @if $selector {
+        #{$selector} {
+            @content;
+        }
+    } @else {
+        @content;
+    }
+}
+
+// Create a generic context.
+@mixin context($selector) {
+    body .is-root-container {
+        @include _selector-wrap($selector) {
+            @content;
+        }
+    }
+}
+
+@mixin template-context($selector) {
+    @include _selector-wrap($selector) {
+        @content;
+    }
+}
+
+// Create a block context.
+@mixin block($id) {
+    @include context('section.block-' + $id) {
+        @content;
+    }
+}
+
+// Create a component context.
+@mixin component($id) {
+    @include context('.component-' + $id) {
+        @content;
+    }
+}
+
+// Create a section context.
+@mixin section($id) {
+    @include context('.section-' + $id) {
+        @content;
+    }
+}
+
+// Create a section context.
+@mixin template($id) {
+    @include template-context('body:not(.wp-admin).page-template-' + $id) {
+        @content;
+    }
+}

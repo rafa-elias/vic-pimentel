@@ -1,0 +1,184 @@
+@use 'sass:list';
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'breakpoints' as *;
+
+// Strip the unit from a number.
+@function no-unit($number) {
+    @if meta.type-of($number) == 'number' and not math.is-unitless($number) {
+        @return math.div($number, ($number * 0 + 1));
+    }
+
+    @return $number;
+}
+
+// Convert a pixel value to rem.
+@function calculate-rem-value($px-value) {
+    $value: math.div($px-value, 16);
+
+    @return $value;
+}
+
+// Convert a list of pixel values to rem.
+@function rem($values, $return-unit: true) {
+    @if list.length($values) == 1 {
+        $rem-value: calculate-rem-value($values);
+
+        @if $return-unit {
+            @return #{$rem-value}rem;
+        } @else {
+            @return $rem-value;
+        }
+    }
+
+    $rem-values: ();
+
+    @for $i from 1 through list.length($values) {
+        $rem-value: rem(list.nth($values, $i));
+
+        @if $return-unit {
+            $rem-values: list.append($rem-values, #{$rem-value}rem);
+        } @else {
+            $rem-values: list.append($rem-values, $rem-value);
+        }
+    }
+
+    @return $rem-values;
+}
+
+// Any length (px number, px, rem) → bare rem number.
+@function _to-rem-number($value) {
+    @if meta.type-of($value) != 'number' {
+        @error 'fluid(): expected a number, got `#{$value}`.';
+    }
+
+    @if math.unit($value) == 'rem' {
+        @return no-unit($value);
+    }
+
+    @return calculate-rem-value(no-unit($value));
+}
+
+// Breakpoint name or raw px → bare rem number.
+@function _stop-rem($stop) {
+    @if meta.type-of($stop) == 'string' {
+        $bp: get-breakpoint($stop);
+
+        @if not $bp {
+            @error 'fluid(): unknown breakpoint `#{$stop}`.';
+        }
+
+        @return no-unit($bp);
+    }
+
+    @return _to-rem-number($stop);
+}
+
+@function _round($n) {
+    @return math.div(math.round($n * 10000), 10000);
+}
+
+// Normalise any accepted input into an ascending list of (stop-rem value-rem) pairs.
+@function _fluid-pairs($stops-or-min, $max, $min-bp, $max-bp) {
+    $pairs: ();
+
+    @if meta.type-of($stops-or-min) == 'map' {
+        // (mobile-small: 24, tablet: 54, 1920px: 150)
+        @each $stop, $value in $stops-or-min {
+            $pairs: list.append($pairs, (_stop-rem($stop) _to-rem-number($value)), $separator: comma);
+        }
+    } @else if meta.type-of($stops-or-min) == 'list' and list.length($stops-or-min) > 1 {
+        // 6-value list in Figma mode order: (1920 1440 1280 1024 600 380)
+        @if list.length($stops-or-min) != list.length($fluid-stops) {
+            @error 'fluid(): a value list needs exactly #{list.length($fluid-stops)} values (Figma mode order, largest first).';
+        }
+
+        @for $i from 1 through list.length($stops-or-min) {
+            $pairs: list.append($pairs, (_stop-rem(list.nth($fluid-stops, $i)) _to-rem-number(list.nth($stops-or-min, $i))), $separator: comma);
+        }
+    } @else {
+        // Legacy two-value form: fluid(min, max, $min-bp, $max-bp)
+        $pairs: ((_stop-rem($min-bp) _to-rem-number($stops-or-min)), (_stop-rem($max-bp) _to-rem-number($max)));
+    }
+
+    // Insertion sort by stop, ascending.
+    $sorted: ();
+
+    @each $pair in $pairs {
+        $inserted: false;
+        $next: ();
+
+        @each $existing in $sorted {
+            @if not $inserted and list.nth($pair, 1) < list.nth($existing, 1) {
+                $next: list.append($next, $pair, $separator: comma);
+                $inserted: true;
+            }
+
+            $next: list.append($next, $existing, $separator: comma);
+        }
+
+        @if not $inserted {
+            $next: list.append($next, $pair, $separator: comma);
+        }
+
+        $sorted: $next;
+    }
+
+    @return $sorted;
+}
+
+// Piecewise-linear fluid value across any number of viewport stops, in one CSS expression
+// (no media queries). Below the first stop the value pins to the first value; above the
+// last stop it pins to the last value (unless $extrapolate: true, which keeps scaling with
+// the viewport past the last stop — for the no-max-width hero/header/footer).
+//
+// Accepted forms:
+//   fluid(16, 24)                                 legacy: 16px @ mobile-small → 24px @ desktop-large
+//   fluid(16, 24, 'mobile-large', 'tablet')       legacy with custom range
+//   fluid((150 104 54 54 32 24))                  6 values in Figma mode order (1920 → 380)
+//   fluid((mobile-small: 24, tablet: 54, desktop-large: 150))   any stops, names or px
+//
+// Each segment contributes clamp(0, (100vw − stopᵢ) · slopeᵢ, Δᵢ) — lengths only, so no
+// typed-division support is needed. Flat segments emit nothing.
+@function fluid($stops-or-min, $max: null, $min-bp: 'mobile-small', $max-bp: 'desktop-large', $extrapolate: false) {
+    $pairs: _fluid-pairs($stops-or-min, $max, $min-bp, $max-bp);
+    $count: list.length($pairs);
+    $base: list.nth(list.nth($pairs, 1), 2);
+    $terms: '';
+
+    @for $i from 1 through $count - 1 {
+        $a: list.nth($pairs, $i);
+        $b: list.nth($pairs, $i + 1);
+        $delta: list.nth($b, 2) - list.nth($a, 2);
+        $span: list.nth($b, 1) - list.nth($a, 1);
+
+        @if $delta != 0 and $span > 0 {
+            $slope: _round(math.div($delta, $span));
+            $ramp: '(100vw - #{_round(list.nth($a, 1))}rem) * #{$slope}';
+            $last: $i == $count - 1;
+
+            @if $extrapolate and $last {
+                @if $delta > 0 {
+                    $terms: $terms + ' + max(0rem, #{$ramp})';
+                } @else {
+                    $terms: $terms + ' + min(0rem, #{$ramp})';
+                }
+            } @else if $delta > 0 {
+                $terms: $terms + ' + clamp(0rem, #{$ramp}, #{_round($delta)}rem)';
+            } @else {
+                $terms: $terms + ' + clamp(#{_round($delta)}rem, #{$ramp}, 0rem)';
+            }
+        }
+    }
+
+    @if $terms == '' {
+        @if $base == 0 {
+            @return 0;
+        }
+
+        @return #{_round($base)}rem;
+    }
+
+    @return calc(#{_round($base)}rem#{$terms});
+}

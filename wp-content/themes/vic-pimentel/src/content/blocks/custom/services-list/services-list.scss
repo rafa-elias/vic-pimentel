@@ -1,0 +1,53 @@
+@use 'util' as *;
+
+@include block('services-list') {
+    .column-content {
+        display: flex;
+        flex-direction: column;
+        gap: $space-l;
+    }
+
+    .services-heading {
+        @include typography($heading-s);
+
+        margin: 0;
+    }
+
+    .services-items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .services-item {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: $space-m;
+        padding: $space-m 0;
+        border-top: rem(2) solid $divider;
+
+        @include media('>=mobile-large') {
+            grid-template-columns: rem(250) minmax(0, 1fr);
+        }
+    }
+
+    .services-title {
+        @include typography($p-l-bold);
+
+        display: flex;
+        gap: $space-s;
+        margin: 0;
+    }
+
+    .services-number {
+        font-weight: 400;
+        color: $text-3;
+    }
+
+    .services-text {
+        @include typography($p-l);
+
+        margin: 0;
+        color: $text-3;
+    }
+}

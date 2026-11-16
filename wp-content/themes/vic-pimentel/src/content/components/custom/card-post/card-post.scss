@@ -1,0 +1,112 @@
+@use 'util' as *;
+
+@include component('card-post') {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: $space-s;
+
+    .card-media-box {
+        @include glass($radius-l);
+
+        position: relative;
+        padding: $space-l;
+        transition: background $fast $ease, border-color $fast $ease;
+    }
+
+    .card-thumb {
+        aspect-ratio: 331 / 206;
+        border-radius: $radius-m;
+        box-shadow: 0 rem(4) rem(20) tint($black, 40);
+
+        .media-toggle {
+            position: absolute;
+            top: calc(#{$space-xs} - #{$space-l});
+            right: calc(#{$space-xs} - #{$space-l});
+        }
+    }
+
+    // The toggle sits in the box corner (Figma: 40px action frame, 8px padding),
+    // outside the clipped thumbnail.
+    .card-thumb {
+        overflow: visible;
+
+        .media-image,
+        .media-video {
+            border-radius: inherit;
+            overflow: hidden;
+        }
+
+        .media-image .img {
+            border-radius: inherit;
+        }
+    }
+
+    .card-meta {
+        display: flex;
+        align-items: center;
+        gap: $space-xs;
+        min-height: rem(24);
+    }
+
+    .card-favicon {
+        position: relative;
+        flex: 0 0 rem(24);
+        width: rem(24);
+        height: rem(24);
+        overflow: hidden;
+        border-radius: $radius-s;
+        background: $surface-hover;
+
+        .picture,
+        .img {
+            @include fit;
+        }
+    }
+
+    .card-labels {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: $space-2xs;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .card-category,
+    .card-company {
+        @include typography($special-2);
+
+        color: $text-1;
+    }
+
+    .card-in {
+        @include typography($special-1);
+
+        color: $text-3;
+        font-style: italic;
+    }
+
+    .card-link {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        border-radius: $radius-l;
+    }
+
+    // The media toggle stays clickable above the stretched link.
+    .media-toggle {
+        z-index: 4;
+    }
+
+    @media (hover: hover) {
+        &:hover .card-media-box {
+            background: $surface-hover;
+            border-color: $border-hover;
+        }
+    }
+
+    &:focus-within .card-media-box {
+        border-color: $border-strong;
+    }
+}

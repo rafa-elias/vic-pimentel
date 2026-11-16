@@ -1,0 +1,14 @@
+@use 'util' as *;
+
+// Block editor canvas iframe only (theme_enqueue_editor_iframe_styles()).
+
+// Shrink core's 40vh click target below the last block.
+body.editor-styles-wrapper::after {
+    height: rem(96);
+}
+
+// CF7's stylesheet isn't loaded in the editor, so hide its empty status boxes.
+.editor-styles-wrapper .wpcf7-response-output,
+.editor-styles-wrapper .wpcf7-not-valid-tip {
+    display: none !important;
+}

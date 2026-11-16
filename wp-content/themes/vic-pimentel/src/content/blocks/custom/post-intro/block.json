@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "post-intro.php"
+    },
+    "name": "acf/post-intro",
+    "title": "Project Intro",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "editor-paragraph",
+    "keywords": [
+        "post-intro"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/post-intro/preview.png"
+        }
+    },
+    "style": "post-intro-style",
+    "editorStyle": "post-intro-style"
+}

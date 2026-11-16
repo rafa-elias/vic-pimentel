@@ -1,0 +1,15 @@
+@use 'util' as *;
+
+$spacings: (
+    none: 0,
+    small: $vertical-small,
+    normal: $vertical-medium,
+    large: $vertical-large,
+    default: $vertical-default
+);
+
+@each $size, $value in $spacings {
+    @include padding-generator(top, $size, $value);
+    @include padding-generator(bottom, $size, $value);
+}
+

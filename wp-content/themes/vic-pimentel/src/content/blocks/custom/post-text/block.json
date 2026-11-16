@@ -1,0 +1,30 @@
+{
+    "supports": {
+        "align": false,
+        "jsx": true,
+        "customClassName": true,
+        "anchor": true,
+        "reusable": true,
+        "renaming": false
+    },
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "post-text.php"
+    },
+    "name": "acf/post-text",
+    "title": "Project Text",
+    "description": "",
+    "category": "custom-blocks",
+    "icon": "editor-alignleft",
+    "keywords": [
+        "post-text"
+    ],
+    "attributes": {
+        "preview_image": {
+            "type": "string",
+            "default": "/src/content/blocks/custom/post-text/preview.png"
+        }
+    },
+    "style": "post-text-style",
+    "editorStyle": "post-text-style"
+}

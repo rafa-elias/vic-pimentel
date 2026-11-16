@@ -1,0 +1,2 @@
+html .wp-block-post-content :where(.wp-block){position:relative;transition:border-color 100ms;box-sizing:border-box;margin:0 0 .5px 0;box-shadow:none !important;border:none !important;padding:0 !important;max-width:100%;overflow:hidden}html .wp-block-post-content :where(.wp-block) .block a{pointer-events:none}
+/*# sourceMappingURL=blocks.css.map */

@@ -1,0 +1,23 @@
+@use 'sass:map';
+
+// Mirrors the 6 modes of Figma's "Dimensions" collection (desktop-large → mobile-small).
+// Order matters: fluid() zips a 6-value token list (Figma order, largest first) against
+// $fluid-stops below.
+$breakpoints: (
+	'mobile-small': calc(380 / 16) * 1rem,
+	'mobile-large': calc(600 / 16) * 1rem,
+	'tablet': calc(1024 / 16) * 1rem,
+	'desktop-small': calc(1280 / 16) * 1rem,
+	'desktop-medium': calc(1440 / 16) * 1rem,
+	'desktop-large': calc(1920 / 16) * 1rem,
+);
+
+// Figma mode order (largest → smallest) — the order a 6-value token list is written in.
+$fluid-stops: ('desktop-large', 'desktop-medium', 'desktop-small', 'tablet', 'mobile-large', 'mobile-small');
+
+@forward 'include-media/dist/include-media' with ( $breakpoints: $breakpoints );
+
+// Get the rem value for a breakpoint.
+@function get-breakpoint($breakpoint) {
+	@return map.get($breakpoints, $breakpoint);
+}

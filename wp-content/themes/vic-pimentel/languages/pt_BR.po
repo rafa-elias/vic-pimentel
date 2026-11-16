@@ -1,0 +1,754 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Base Theme 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/template-base\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-07-12T18:54:30+00:00\n"
+"PO-Revision-Date: 2026-07-12 15:54-0300\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 3.6\n"
+"X-Domain: rear-theme\n"
+
+#. Description of the theme
+#: style.css
+msgid "Base Theme created by Rafael Elias Alves Ribeiro to develop amazing WordPress websites."
+msgstr "Tema Base criado por Rafael Elias Alves Ribeiro para o desenvolvimento de websites em WordPress."
+
+#. Author of the theme
+#: style.css
+msgid "Rafael Elias Alves Ribeiro"
+msgstr "Rafael Elias Alves Ribeiro"
+
+#. Author URI of the theme
+#: style.css
+msgid "https://rafaelias.com.br/"
+msgstr "https://rafaelias.com.br/"
+
+#: app/custom-fields.php:10
+msgid "Custom Button"
+msgstr "Botão Customizado"
+
+#: app/menus.php:9
+#: app/options-pages.php:34
+#: app/options-pages.php:35
+msgid "Header"
+msgstr "Cabeçalho"
+
+#: app/menus.php:10
+#: app/options-pages.php:41
+#: app/options-pages.php:42
+msgid "Footer"
+msgstr "Rodapé"
+
+#: app/options-pages.php:11
+#: app/options-pages.php:12
+msgid "Site Settings"
+msgstr "Config. Site"
+
+#: app/options-pages.php:20
+#: app/options-pages.php:21
+msgid "Default Image"
+msgstr "Imagens Padrões"
+
+#: app/options-pages.php:27
+#: app/options-pages.php:28
+msgid "Default Pages"
+msgstr "Páginas Padrões"
+
+#: app/options-pages.php:48
+#: app/options-pages.php:49
+msgid "Social Media"
+msgstr "Redes Sociais"
+
+#: app/options-pages.php:55
+#: app/options-pages.php:56
+msgid "Login"
+msgstr "Login"
+
+#: app/options-pages.php:62
+#: app/options-pages.php:63
+msgid "Scripts"
+msgstr "Scripts"
+
+#: core/blocks.php:465
+msgid "Custom Blocks"
+msgstr "Blocos Customizados"
+
+#: core/blocks.php:470
+msgid "Inner Blocks"
+msgstr "Blocos Internos"
+
+#: core/blocks.php:475
+msgid "Wrappers"
+msgstr "Wrappers"
+
+#: core/core.php:378
+#: core/core.php:379
+#: core/core.php:381
+#: core/core.php:434
+#, php-format
+msgid "Add New %s"
+msgstr "Adicionar Novo %s"
+
+#: core/core.php:380
+#: core/core.php:432
+#, php-format
+msgid "Edit %s"
+msgstr "Editar %s"
+
+#: core/core.php:382
+#: core/core.php:383
+#, php-format
+msgid "View %s"
+msgstr "Ver %s"
+
+#: core/core.php:384
+#: core/core.php:428
+#, php-format
+msgid "Search %s"
+msgstr "Buscar %s"
+
+#: core/core.php:385
+#, php-format
+msgid "No %s found"
+msgstr "Nenhum %s encontrado"
+
+#: core/core.php:386
+#, php-format
+msgid "No %s found in Trash"
+msgstr "Nenhum %s encontrado na Lixeira"
+
+#: core/core.php:387
+#: core/core.php:429
+#, php-format
+msgid "All %s"
+msgstr "Todos %s"
+
+#: core/core.php:430
+#, php-format
+msgid "Parent %s"
+msgstr "Pai %s"
+
+#: core/core.php:431
+#, php-format
+msgid "Parent %s:"
+msgstr "Parente %s:"
+
+#: core/core.php:433
+#, php-format
+msgid "Update %s"
+msgstr "Atualizar %s"
+
+#: core/core.php:435
+#, php-format
+msgid "New %s Name"
+msgstr "Novo  %s Nome"
+
+#: src/content/components/style-guide/form/form.php:8
+msgid "Send"
+msgstr "Enviar"
+
+#: src/content/components/custom/header/header.php:127
+#: src/content/components/library/header-1/header-1.php:124
+#: src/content/components/library/header-click-1/header-click-1.php:124
+msgid "Open menu"
+msgstr "Abrir menu"
+
+#: src/content/components/custom/header/header.php:129
+#: src/content/components/library/header-1/header-1.php:126
+#: src/content/components/library/header-click-1/header-click-1.php:126
+msgid "Main menu Button. Press Enter or Space to toggle menu and navigate using Arrow Keys. Escape key closes the menu and Tab jumps to next item."
+msgstr "Botão do menu principal. Pressione Enter ou Espaço para alternar o menu e navegar usando as teclas de seta. A tecla Escape fecha o menu e a tecla Tab pula para o próximo item."
+
+#: src/content/components/custom/mega-menu/mega-menu.php:51
+#: src/content/components/library/mega-menu-1/mega-menu-1.php:51
+msgid "Back"
+msgstr "Voltar"
+
+#: src/content/components/style-guide/modal/modal.php:45
+#: src/content/components/style-guide/modal/modal.php:46
+msgid "Close Modal"
+msgstr "Fechar Modal"
+
+#: src/content/components/style-guide/modal/modal.php:47
+msgid "Close"
+msgstr "Fechar"
+
+#: src/content/components/style-guide/pagination/pagination.php:31
+msgid "Pagination"
+msgstr "Paginação"
+
+#: src/content/components/style-guide/swiper-controls/swiper-controls.php:30
+msgid "Return to previous slide"
+msgstr "Retornar ao slide anterior"
+
+#: src/content/components/style-guide/swiper-controls/swiper-controls.php:42
+msgid "Navigate to next slide"
+msgstr "Navegador para o próximo slide"
+
+#: src/content/blocks/library/tabs/tabs-1/tabs-1.php:22
+#: src/content/blocks/library/tabs/tabs-2/tabs-2.php:22
+#: src/content/blocks/library/tabs/tabs-3/tabs-3.php:24
+#: src/content/blocks/library/tabs/tabs-4/tabs-4.php:24
+#: src/content/blocks/library/tabs/tabs-5/tabs-5.php:22
+#: src/content/blocks/library/tabs/tabs-6/tabs-6.php:22
+#: src/content/blocks/library/tabs/tabs-7/tabs-7.php:18
+#: src/content/components/style-guide/tabs/tabs.php:6
+msgid "Tabs"
+msgstr "Guias"
+
+#: src/content/components/style-guide/tabs/tabs.php:57
+msgid "Select Tab"
+msgstr "Selecione guia"
+
+#. Template Name of the theme
+msgid "Block Listing"
+msgstr "Listagem de Blocos"
+
+#. Template Name of the theme
+msgid "Globals"
+msgstr "Globais"
+
+#. Theme Name of the theme
+#: style.css
+msgid "Base Theme v2"
+msgstr "Tema Base v2"
+
+#: core/blocks.php:334
+msgid "This block has no content yet — fill in its fields to display it."
+msgstr "Este bloco ainda não tem conteúdo — preencha os campos para exibi-lo."
+
+#: src/content/components/custom/card-material/card-material.php:41
+msgid "Confira"
+msgstr "Confira"
+
+#: core/blocks.php:455
+msgid "Library"
+msgstr "Biblioteca"
+
+#: src/content/blocks/library/carousel/carousel-15/carousel-15.php:32
+msgid "Todos"
+msgstr "Todos"
+
+#: src/content/blocks/library/tabs/tabs-4/parts/panel.php:15
+#, php-format
+msgid "ETAPA %1$d DE %2$d"
+msgstr "ETAPA %1$d DE %2$d"
+
+#: src/content/blocks/library/timeline/timeline-4/timeline-4.php:9
+msgid "Concluído"
+msgstr "Concluído"
+
+#: src/content/blocks/library/timeline/timeline-4/timeline-4.php:10
+msgid "Em andamento"
+msgstr "Em andamento"
+
+#: src/content/blocks/library/timeline/timeline-4/timeline-4.php:11
+msgid "Planejado"
+msgstr "Planejado"
+
+#: src/content/components/custom/card-post/card-post.php:41
+msgid "Ler mais →"
+msgstr "Ler mais →"
+
+#: src/content/components/style-guide/video-player/video-player.php:127
+msgid "Play video"
+msgstr "Reproduzir vídeo"
+
+#. Template Name of the theme
+msgid "Ember Animations - Image"
+msgstr "Ember Animations - Imagem"
+
+#. Template Name of the theme
+msgid "Ember Animations - Text"
+msgstr "Ember Animations - Texto"
+
+#: app/options-pages.php:69
+#: app/options-pages.php:70
+msgid "Feature Toggles"
+msgstr "Ativar Recursos"
+
+#: modules/duplicate-post.php:75
+#: modules/duplicate-post.php:156
+msgid "Duplicate"
+msgstr "Duplicar"
+
+#: modules/duplicate-post.php:85
+msgid "Missing post."
+msgstr "Post não encontrado."
+
+#: modules/duplicate-post.php:89
+msgid "Duplicate Post is not enabled."
+msgstr "Duplicar Post não está ativado."
+
+#: modules/duplicate-post.php:92
+msgid "Post not found."
+msgstr "Post não encontrado."
+
+#: modules/duplicate-post.php:95
+msgid "Duplicating this post type is not allowed."
+msgstr "Não é permitido duplicar este tipo de conteúdo."
+
+#: modules/duplicate-post.php:100
+#: modules/duplicate-post.php:107
+#: modules/media-optimizer/inc/class-media-library-ui.php:221
+#: modules/media-optimizer/inc/class-settings-page.php:143
+msgid "Not allowed."
+msgstr "Não permitido."
+
+#: modules/duplicate-post.php:111
+msgid "Duplication failed."
+msgstr "Falha ao duplicar."
+
+#. translators: %s: link to the new draft
+#: modules/duplicate-post.php:134
+#, php-format
+msgid "Post duplicated — <a href=\"%s\">edit the copy</a>."
+msgstr "Post duplicado — <a href=\"%s\">edite a cópia</a>."
+
+#. translators: %s: original post title
+#: modules/duplicate-post.php:218
+#, php-format
+msgid "%s (Copy)"
+msgstr "%s (Cópia)"
+
+#: modules/media-optimizer/inc/class-admin-bar.php:34
+#: modules/media-optimizer/inc/class-admin-menu.php:26
+#: modules/media-optimizer/inc/class-admin-menu.php:27
+msgid "MediaTrim"
+msgstr "MediaTrim"
+
+#. translators: %d: number of pending images
+#: modules/media-optimizer/inc/class-admin-bar.php:52
+#, php-format
+msgid "Process %d pending image(s) now"
+msgstr "Processar %d imagem(ns) pendente(s) agora"
+
+#: modules/media-optimizer/inc/class-admin-bar.php:63
+#: modules/media-optimizer/inc/class-admin-menu.php:46
+#: modules/media-optimizer/inc/class-admin-menu.php:47
+#: modules/media-optimizer/inc/class-settings-page.php:133
+msgid "Optimize Images"
+msgstr "Otimizar Imagens"
+
+#: modules/media-optimizer/inc/class-admin-bar.php:70
+#: modules/media-optimizer/inc/class-admin-menu.php:37
+#: modules/media-optimizer/inc/class-admin-menu.php:38
+msgid "Settings"
+msgstr "Configurações"
+
+#: modules/media-optimizer/inc/class-admin-bar.php:96
+msgid "Processing…"
+msgstr "Processando…"
+
+#: modules/media-optimizer/inc/class-admin-bar.php:97
+msgid "Done!"
+msgstr "Concluído!"
+
+#: modules/media-optimizer/inc/class-admin-menu.php:55
+#: modules/media-optimizer/inc/class-admin-menu.php:56
+msgid "Regenerate Thumbnails"
+msgstr "Regenerar Miniaturas"
+
+#: modules/media-optimizer/inc/class-capability.php:76
+msgid "MediaTrim: WebP conversion needs the Imagick or GD PHP extension with WebP support enabled on this server. Ask your host to enable one of these — most managed hosts already have one available; some shared-hosting plans need it turned on explicitly."
+msgstr "MediaTrim: a conversão para WebP precisa da extensão PHP Imagick ou GD com suporte a WebP habilitado neste servidor. Peça à sua hospedagem para habilitar uma delas — a maioria das hospedagens gerenciadas já possui uma disponível; alguns planos de hospedagem compartilhada precisam que isso seja ativado manualmente."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:62
+msgid "Optimization"
+msgstr "Otimização"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:72
+msgid "N/A"
+msgstr "N/A"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:77
+msgid "WebP"
+msgstr "WebP"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:86
+msgid "Original"
+msgstr "Original"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:126
+msgid "Re-optimize"
+msgstr "Reotimizar"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:136
+msgid "Restore this image to exactly what was originally uploaded? This undoes both re-compression and WebP generation."
+msgstr "Restaurar esta imagem exatamente ao que foi originalmente enviado? Isso desfaz tanto a recompressão quanto a geração de WebP."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:137
+msgid "Restore All"
+msgstr "Restaurar Tudo"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:145
+msgid "Restore the original file? This replaces the current re-compressed version."
+msgstr "Restaurar o arquivo original? Isso substitui a versão recomprimida atual."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:146
+msgid "Restore Original"
+msgstr "Restaurar Original"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:154
+msgid "Remove the generated WebP files? Visitors will be served the original image again."
+msgstr "Remover os arquivos WebP gerados? Os visitantes voltarão a receber a imagem original."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:155
+msgid "Remove WebP"
+msgstr "Remover WebP"
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:224
+msgid "Missing attachment."
+msgstr "Anexo não encontrado."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:245
+msgid "Optimize now (MediaTrim)"
+msgstr "Otimizar agora (MediaTrim)"
+
+#. translators: %d: number of images processed
+#: modules/media-optimizer/inc/class-media-library-ui.php:289
+#, php-format
+msgid "MediaTrim: %d image processed."
+msgid_plural "MediaTrim: %d images processed."
+msgstr[0] "MediaTrim: %d imagem processada."
+msgstr[1] "MediaTrim: %d imagens processadas."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:297
+msgid "MediaTrim: image re-optimized."
+msgstr "MediaTrim: imagem reotimizada."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:298
+msgid "MediaTrim: original restored."
+msgstr "MediaTrim: original restaurado."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:299
+msgid "MediaTrim: WebP removed, original will be served."
+msgstr "MediaTrim: WebP removido, o original será exibido."
+
+#: modules/media-optimizer/inc/class-media-library-ui.php:300
+msgid "MediaTrim: image fully restored to its original upload."
+msgstr "MediaTrim: imagem totalmente restaurada ao upload original."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:37
+msgid "Finding images to process…"
+msgstr "Procurando imagens para processar…"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:38
+#: modules/media-optimizer/inc/class-optimize-page.php:62
+#, php-format
+msgid "Processing %1$d of %2$d…"
+msgstr "Processando %1$d de %2$d…"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:39
+#: modules/media-optimizer/inc/class-optimize-page.php:63
+#: modules/media-optimizer/inc/class-thumbnails-page.php:40
+#, php-format
+msgid "Done — %d images processed."
+msgstr "Concluído — %d imagens processadas."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:40
+#: modules/media-optimizer/inc/class-optimize-page.php:64
+#: modules/media-optimizer/inc/class-thumbnails-page.php:41
+msgid "Cancelled."
+msgstr "Cancelado."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:41
+msgid "Nothing to process — everything is already optimized."
+msgstr "Nada para processar — tudo já está otimizado."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:42
+msgid "Skipped (unsupported file type)"
+msgstr "Ignorado (tipo de arquivo não suportado)"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:43
+#: modules/media-optimizer/inc/class-thumbnails-page.php:43
+msgid "Failed"
+msgstr "Falhou"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:44
+msgid "Optimized"
+msgstr "Otimizado"
+
+#. translators: %s: an already-formatted duration, e.g. "2m 30s"
+#: modules/media-optimizer/inc/class-optimize-page.php:46
+#: modules/media-optimizer/inc/class-optimize-page.php:71
+#: modules/media-optimizer/inc/class-thumbnails-page.php:49
+#, php-format
+msgid "(~%s remaining)"
+msgstr "(~%s restante(s))"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:61
+#: modules/media-optimizer/inc/class-thumbnails-page.php:38
+msgid "Finding images…"
+msgstr "Procurando imagens…"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:65
+msgid "Nothing to do — no images have a backup or generated WebP."
+msgstr "Nada a fazer — nenhuma imagem possui cópia de segurança ou WebP gerado."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:66
+msgid "Restored"
+msgstr "Restaurado"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:67
+msgid "WebP removed"
+msgstr "WebP removido"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:68
+msgid "Restore every optimized image in the library to exactly what was originally uploaded? This undoes both re-compression and WebP generation everywhere it was applied."
+msgstr "Restaurar todas as imagens otimizadas da biblioteca exatamente ao que foi originalmente enviado? Isso desfaz tanto a recompressão quanto a geração de WebP onde quer que tenham sido aplicadas."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:69
+msgid "Remove the generated WebP files for every image in the library? Visitors will be served the original images again."
+msgstr "Remover os arquivos WebP gerados para todas as imagens da biblioteca? Os visitantes voltarão a receber as imagens originais."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:76
+msgid "MediaTrim — Optimize Images"
+msgstr "MediaTrim — Otimizar Imagens"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:77
+msgid "Applies your current settings to images already in the Media Library."
+msgstr "Aplica suas configurações atuais às imagens já existentes na Biblioteca de Mídia."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:84
+msgid "Re-process images that are already optimized too"
+msgstr "Reprocessar também as imagens que já estão otimizadas"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:88
+#: modules/media-optimizer/inc/class-thumbnails-page.php:74
+msgid "Start"
+msgstr "Iniciar"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:89
+#: modules/media-optimizer/inc/class-optimize-page.php:121
+#: modules/media-optimizer/inc/class-thumbnails-page.php:75
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:103
+#: modules/media-optimizer/inc/class-optimize-page.php:135
+#: modules/media-optimizer/inc/class-thumbnails-page.php:89
+msgid "Image"
+msgstr "Imagem"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:104
+#: modules/media-optimizer/inc/class-thumbnails-page.php:90
+msgid "Status"
+msgstr "Status"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:105
+msgid "Before"
+msgstr "Antes"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:106
+msgid "After"
+msgstr "Depois"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:107
+msgid "Saved"
+msgstr "Economia"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:114
+msgid "Restore / Undo"
+msgstr "Restaurar / Desfazer"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:115
+msgid "Undo optimization across the entire library at once. Images with nothing to restore are simply skipped, so this is safe to run at any time."
+msgstr "Desfaz a otimização em toda a biblioteca de uma só vez. Imagens sem nada a restaurar são simplesmente ignoradas, então é seguro executar isso a qualquer momento."
+
+#: modules/media-optimizer/inc/class-optimize-page.php:119
+msgid "Restore All Images"
+msgstr "Restaurar Todas as Imagens"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:120
+msgid "Remove All WebP"
+msgstr "Remover Todo o WebP"
+
+#: modules/media-optimizer/inc/class-optimize-page.php:136
+msgid "Result"
+msgstr "Resultado"
+
+#: modules/media-optimizer/inc/class-settings-page.php:42
+msgid "MediaTrim — Settings"
+msgstr "MediaTrim — Configurações"
+
+#: modules/media-optimizer/inc/class-settings-page.php:45
+msgid "Settings saved."
+msgstr "Configurações salvas."
+
+#. translators: %s: capability backend name, e.g. IMAGICK
+#: modules/media-optimizer/inc/class-settings-page.php:54
+#, php-format
+msgid "Using %s for image processing."
+msgstr "Usando %s para processamento de imagem."
+
+#: modules/media-optimizer/inc/class-settings-page.php:68
+msgid "Optimize on upload"
+msgstr "Otimizar no upload"
+
+#: modules/media-optimizer/inc/class-settings-page.php:72
+msgid "Automatically process new uploads in the background"
+msgstr "Processar automaticamente os novos uploads em segundo plano"
+
+#: modules/media-optimizer/inc/class-settings-page.php:74
+msgid "Uncheck if you are experiencing issues while uploading images (e.g. very large files timing out on a limited host) — images already in the library are unaffected, and can still be processed manually from Optimize Images."
+msgstr "Desmarque se estiver enfrentando problemas ao enviar imagens (por exemplo, arquivos muito grandes excedendo o tempo limite em uma hospedagem limitada) — as imagens já existentes na biblioteca não são afetadas e ainda podem ser processadas manualmente em Otimizar Imagens."
+
+#: modules/media-optimizer/inc/class-settings-page.php:78
+msgid "Generate WebP"
+msgstr "Gerar WebP"
+
+#: modules/media-optimizer/inc/class-settings-page.php:82
+msgid "Add a WebP sibling alongside the original"
+msgstr "Adicionar uma versão WebP junto ao arquivo original"
+
+#: modules/media-optimizer/inc/class-settings-page.php:84
+msgid "Never touches the original file — zero risk, purely additive."
+msgstr "Nunca altera o arquivo original — risco zero, totalmente aditivo."
+
+#: modules/media-optimizer/inc/class-settings-page.php:88
+msgid "Re-compress originals"
+msgstr "Recomprimir originais"
+
+#: modules/media-optimizer/inc/class-settings-page.php:92
+msgid "Shrink the original file itself, not just add WebP"
+msgstr "Reduzir o próprio arquivo original, não apenas adicionar WebP"
+
+#: modules/media-optimizer/inc/class-settings-page.php:94
+msgid "A backup is always kept before recompressing — restore it any time from the Media Library."
+msgstr "Uma cópia de segurança é sempre mantida antes de recomprimir — restaure-a a qualquer momento pela Biblioteca de Mídia."
+
+#: modules/media-optimizer/inc/class-settings-page.php:98
+msgid "Quality"
+msgstr "Qualidade"
+
+#: modules/media-optimizer/inc/class-settings-page.php:101
+msgid "Low (smallest files)"
+msgstr "Baixa (arquivos menores)"
+
+#: modules/media-optimizer/inc/class-settings-page.php:102
+msgid "Balanced (recommended)"
+msgstr "Equilibrado (recomendado)"
+
+#: modules/media-optimizer/inc/class-settings-page.php:103
+msgid "High (largest files, best quality)"
+msgstr "Alta (arquivos maiores, melhor qualidade)"
+
+#: modules/media-optimizer/inc/class-settings-page.php:104
+msgid "Custom"
+msgstr "Personalizado"
+
+#: modules/media-optimizer/inc/class-settings-page.php:110
+msgid "WebP quality (1-100)"
+msgstr "Qualidade do WebP (1-100)"
+
+#: modules/media-optimizer/inc/class-settings-page.php:116
+msgid "Re-compression quality (1-100)"
+msgstr "Qualidade de recompressão (1-100)"
+
+#: modules/media-optimizer/inc/class-settings-page.php:125
+msgid "Save Settings"
+msgstr "Salvar Configurações"
+
+#. translators: %s: link to the Optimize Images page
+#: modules/media-optimizer/inc/class-settings-page.php:132
+#, php-format
+msgid "Want to process images already in your library? Head to %s."
+msgstr "Quer processar as imagens que já estão na sua biblioteca? Acesse %s."
+
+#: modules/media-optimizer/inc/class-stats.php:73
+msgid "Images optimized"
+msgstr "Imagens otimizadas"
+
+#: modules/media-optimizer/inc/class-stats.php:77
+msgid "Total space saved"
+msgstr "Espaço total economizado"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:39
+#, php-format
+msgid "Regenerating %1$d of %2$d…"
+msgstr "Regenerando %1$d de %2$d…"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:42
+msgid "No images found."
+msgstr "Nenhuma imagem encontrada."
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:44
+#: modules/media-optimizer/inc/class-thumbnails-page.php:46
+msgid "Regenerated"
+msgstr "Regenerado"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:45
+msgid "Skipped (already correct)"
+msgstr "Ignorado (já correto)"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:47
+msgid "Deleted"
+msgstr "Excluído"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:54
+msgid "MediaTrim — Regenerate Thumbnails"
+msgstr "MediaTrim — Regenerar Miniaturas"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:56
+msgid "Recreates registered image sizes (thumbnail, medium, large, and any custom sizes) from each image's original file. Use this after changing image size settings, or if generated sizes look wrong or outdated. The original file itself is never touched."
+msgstr "Recria os tamanhos de imagem registrados (miniatura, médio, grande e quaisquer tamanhos personalizados) a partir do arquivo original de cada imagem. Use isso depois de alterar as configurações de tamanho de imagem, ou se os tamanhos gerados parecerem incorretos ou desatualizados. O arquivo original nunca é alterado."
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:62
+msgid "Skip images that already have correctly-sized thumbnails (faster)"
+msgstr "Pular imagens que já possuem miniaturas com o tamanho correto (mais rápido)"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:67
+msgid "Delete old thumbnail files that no longer match a registered size, to free up server space"
+msgstr "Excluir arquivos de miniaturas antigos que não correspondem mais a um tamanho registrado, para liberar espaço no servidor"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:70
+msgid "This may break anything still directly linking to an old size's file URL. Leave unchecked unless you specifically want to reclaim disk space."
+msgstr "Isso pode quebrar qualquer coisa que ainda esteja vinculada diretamente à URL do arquivo de um tamanho antigo. Deixe desmarcado a menos que você queira especificamente liberar espaço em disco."
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:91
+msgid "Details"
+msgstr "Detalhes"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:98
+msgid "Registered Thumbnail Sizes"
+msgstr "Tamanhos de Miniatura Registrados"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:99
+msgid "These are the sizes currently registered on this site — this is what regeneration produces."
+msgstr "Estes são os tamanhos atualmente registrados neste site — é isso que a regeneração produz."
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:110
+msgid "No custom sizes are registered."
+msgstr "Nenhum tamanho personalizado registrado."
+
+#. translators: 1: width, 2: height, 3: crop/proportional behavior description
+#: modules/media-optimizer/inc/class-thumbnails-page.php:121
+#, php-format
+msgid "%1$d×%2$d pixels (%3$s)"
+msgstr "%1$d×%2$d pixels (%3$s)"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:125
+msgid "cropped to fit"
+msgstr "recortado para ajustar"
+
+#: modules/media-optimizer/inc/class-thumbnails-page.php:126
+msgid "proportionally resized to fit inside dimensions"
+msgstr "redimensionado proporcionalmente para caber nas dimensões"
+
+#. translators: %d: number of duplicated posts
+#: modules/duplicate-post.php:201
+#, php-format
+msgid "%d post duplicated."
+msgid_plural "%d posts duplicated."
+msgstr[0] "%d post duplicado."
+msgstr[1] "%d posts duplicados."
+
+#: modules/svg-support.php:72
+msgid "This SVG file could not be safely sanitized and was rejected."
+msgstr "Este arquivo SVG não pôde ser higienizado com segurança e foi rejeitado."
