@@ -1,0 +1,36 @@
+name: Deploy to Pantheon Dev
+
+on:
+  push:
+    branches:
+      - pantheon
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository (Full History)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup SSH Agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.PANTHEON_SSH_PRIVATE_KEY }}
+
+      - name: Add Pantheon Remote
+        run: |
+          git remote add pantheon ssh://${{ secrets.PANTHEON_SERVER_ID }}@${{ secrets.PANTHEON_SERVER_ID }}.drush.in:2222/~/repository.git
+
+      - name: Configure SSH Host Key Checking
+        run: |
+          mkdir -p ~/.ssh
+          echo "Host *.drush.in" >> ~/.ssh/config
+          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+          chmod 600 ~/.ssh/config
+
+      - name: Push to Pantheon Dev
+        run: |
+          git push pantheon pantheon:master -f
